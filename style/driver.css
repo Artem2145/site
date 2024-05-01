@@ -7,143 +7,227 @@
     width: 82%;
 
 }
-header{
-	margin-bottom: 20px;
+
+header {
+    margin-bottom: 20px;
 }
-.logo img{
-	width: 200px;
-	height: 100px;
+
+.logo img {
+    width: 200px;
+    height: 100px;
 
 }
-.info{
+
+.info {
     display: flex;
     flex-wrap: wrap;
 }
-.info li{
+
+.info li {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
 }
-.info li a{
+
+.info li a {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
 }
-.info li a img, .info li img{
+
+.info li a img,
+.info li img {
     max-width: 20px;
     max-height: 20px;
 }
-.header-line nav{
-	display: flex;
-	align-items: center; 
+
+.header-line nav {
+    display: flex;
+    align-items: center;
 }
 
-.header-line{
-	background-color: #808080;
+.header-line {
+    background-color: #808080;
 }
-.header-line .wrapper{
+
+.header-line .wrapper {
     display: flex;
     justify-content: space-between;
 }
-.header-line li{
-	position: relative;
-	list-style: none;
-	margin-right: 60px;
-	color: white;
+
+.header-line li {
+    position: relative;
+    list-style: none;
+    margin-right: 60px;
+    color: white;
 }
 
 
-.icon, .iconn, .iconnn {
+.icon,
+.iconn,
+.iconnn {
     transition: transform 0.3s ease-in-out;
 }
 
-.icon:hover, .iconn:hover, .iconnn:hover {
+.icon:hover,
+.iconn:hover,
+.iconnn:hover {
     transform: scale(1.1);
     color: black;
 }
 
 
-.icon a:hover, .iconn a:hover, .iconnn:hover {
+.icon a:hover,
+.iconn a:hover,
+.iconnn:hover {
     transform: scale(1.1);
     color: black;
 }
 
-.header-line li a{
-	color: white;
-	text-decoration: none;
+.header-line li a {
+    color: white;
+    text-decoration: none;
 }
 
-.main-nav{
+
+
+
+
+.main-nav {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 90px;
 }
-.main-line{
+
+.main-line {
     display: flex;
     flex-wrap: wrap;
 }
 
-.main-line nav{
-	list-style: none;
+.main-line nav {
+    list-style: none;
 }
 
-.main-line li{
-	display: flex;
-	align-items: center;
+.main-line li {
+    display: flex;
+    align-items: center;
 
 
 }
-.main-line li a{
-	text-decoration: none;
-	color: black;
-	margin-right: 60px;
-	 transition: transform 0.3s ease-in-out;
+
+.main-line li a {
+    text-decoration: none;
+    color: black;
+    margin-right: 60px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.main-title{
-	font-size: 30px;
-	font-weight: normal;
+.main-title {
+    font-size: 30px;
+    font-weight: normal;
 }
+
+
 .main-line li a:hover {
-    background-color: #f8f8f8; 
-    transform: scale(1.1); 
-    color: #333; 
-    border-radius: 5px; 
-    transition: background-color 0.3s, color 0.3s; 
+    background-color: #f8f8f8;
+    transform: scale(1.1);
+    color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 
 
- /* Загальні стилі для форм */
- form {
+
+
+
+/* Стилі для форми */
+form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto; /* Додав відступи по вертикалі та горизонталі */
+}
+
+/* Стилі для заголовка h4 */
+form h4 {
+    text-align: center;
+    color: #333;
     margin-bottom: 20px;
+    font-size: 24px;
+    text-transform: uppercase;
 }
+
+/* Стилі для параграфів */
 form p {
-    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px; /* Зменшив відступ між параграфами */
 }
+
+/* Стилі для текстових полів */
 form input[type="text"],
 form input[type="date"],
 form input[type="time"] {
-    padding: 5px;
-    margin-bottom: 10px;
+    width: calc(100% - 20px);
+    padding: 8px 10px;
+    margin-bottom: 15px; /* Збільшив відступ між текстовими полями */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Стилі для кнопок */
+form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     width: 100%;
-    box-sizing: border-box;
+    margin-top: 15px; /* Збільшив відступ перед кнопкою */
+    font-size: 16px;
 }
 
-/* Стилізація для першої форми */
-.first-form {
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
+/* Стилі для кнопок при наведенні */
+form input[type="submit"]:hover {
+    background-color: #45a049;
 }
 
-/* Стилізація для другої форми */
-.second-form {
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
+/* Стилі для елементів форми у колонках */
+form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Збільшив відступ між елементами форми */
+}
+
+/* Стилі для посилання */
+a.button {
+    display: inline-block; /* Зробити елемент блоковим */
+    background-color: #007bff; /* Синій колір посилання */
+    color: white; /* Білий колір тексту */
+    padding: 10px 15px; /* Величина внутрішнього відступу */
+    text-decoration: none; /* Відсутність підкреслення */
+    border-radius: 5px; /* Закруглені кути */
+    transition: background-color 0.3s; /* Плавне змінювання кольору при наведенні */
+}
+
+/* Стилі для посилання при наведенні */
+a.button:hover {
+    background-color: #0056b3; /* Змінюємо колір посилання при наведенні */
+}
+
+.form-job {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+    color: #333; /* Колір тексту */
+    margin-top: 20px; /* Відступ зверху */
 }
 
 
@@ -313,80 +397,13 @@ hr.line {
 }
 
 
-/* Стилі для форми */
-form {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: 0 auto;
-}
 
-/* Стилі для заголовка h4 */
-form h4 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-    font-size: 24px;
-    text-transform: uppercase;
-}
-h4 {
-    text-align: center;
-    color: #333; /* Колір тексту */
-    margin-top: 20px; /* Відступ зверху */
-}
 
-/* Стилі для параграфів */
-form p {
-    font-weight: bold;
-    color: #555;
-    margin-bottom: 5px;
-}
 
-/* Стилі для текстових полів */
-form input[type="text"],
-form input[type="date"],
-form input[type="time"] {
-    width: calc(100% - 20px);
-    padding: 8px 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
 
-/* Стилі для кнопок */
-form input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 10px;
-    font-size: 16px;
-}
-input[type=text]:focus {
-    border: 3px solid #555;
-  }
-/* Стилі для кнопок при наведенні */
-form input[type="submit"]:hover {
-    background-color: #45a049;
-}
 
-/* Стилі для елементів форми у колонках */
-form div {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-}
 
-/* Стилі для форми з класом "delivery" */
-form.delivery {
-    max-width: 600px;
-    margin: 20px auto;
-}
+
 
 .main{
     margin-bottom: 50px;
@@ -422,9 +439,3 @@ form.delivery {
         justify-content: center;
     }
   }
-
-
-
-
-
-
