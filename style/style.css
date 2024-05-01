@@ -391,15 +391,27 @@ hr.line {
 }
 
 .email-button img {
-    background-color: #BDC0B0; /* Фон для кнопки електронної пошти */
+
     padding: 2px;
 }
 
 .phone-button img {
-    background-color: #BDC0B0; /* Фон для кнопки телефону */
+   
     padding: 1px;
 }
 
+
+
+
+
+
+
+@media screen and (max-width: 400px){
+    .main-top-img img{
+        width: 80px;
+        height: 80px;
+    }
+  }
 
 @media screen and (max-width: 700px) {
     .header-line li{
@@ -408,7 +420,15 @@ hr.line {
     .info{
         justify-content: center;
     }
+    .wrapper{
+        width: 95%;
+    }
+
+
+    
   }
+
+
   @media screen and (max-width: 960px){
     .main-line{
         justify-content: center;
