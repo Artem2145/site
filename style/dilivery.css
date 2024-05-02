@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 82%;
+
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 200px;
+    height: 100px;
+
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.info li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.info li a img,
+.info li img {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.header-line nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-line {
+    background-color: #808080;
+}
+
+.header-line .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-line li {
+    position: relative;
+    list-style: none;
+    margin-right: 60px;
+    color: white;
+}
+
+
+.icon,
+.iconn,
+.iconnn {
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon:hover,
+.iconn:hover,
+.iconnn:hover {
+    transform: scale(1.1);
+    color: black;
+}
+
+
+.icon a:hover,
+.iconn a:hover,
+.iconnn:hover {
+    transform: scale(1.1);
+    color: black;
+}
+
+
+.header-line li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-line {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-line nav {
+    list-style: none;
+}
+
+.main-line li {
+    display: flex;
+    align-items: center;
+
+
+}
+
+.main-line li a {
+    text-decoration: none;
+    color: black;
+    margin-right: 60px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.main-title {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+
+.main-line li a:hover {
+    background-color: #f8f8f8;
+    transform: scale(1.1);
+    color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.form-dilivery {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto; /* Додав відступи по вертикалі та горизонталі */
+}
+
+.form-dilivery h4 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.form-dilivery p {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.form-dilivery input[type="text"],
+.form-dilivery input[type="date"],
+.form-dilivery input[type="time"],
+.form-dilivery input[type="submit"] {
+    width: calc(100% - 20px);
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-dilivery a.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.form-dilivery a.button:hover {
+    background-color: #45a049;
+}
+
+.form-dilivery div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
