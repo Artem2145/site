@@ -640,7 +640,7 @@ hr.line {
 }
 
 body{
-    background-image: url(..image/ифп.JPG);
+    background-image: url(../image/ифп.JPG);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed; /* фон будет фиксированным при прокрутке страницы */
