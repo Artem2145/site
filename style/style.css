@@ -638,3 +638,11 @@ hr.line {
     height: 100%;
     object-fit: cover; /* чтобы изображения заполняли всю площадь без искажения */
 }
+
+body{
+    background-image: url(..image/ифп.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* фон будет фиксированным при прокрутке страницы */
+    height: 100vh; /* высота равна 100% высоты видимой области окна браузера */
+}
