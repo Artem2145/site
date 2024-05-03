@@ -528,3 +528,23 @@ hr.line {
 
     padding: 1px;
 }
+
+
+.slideshow-container {
+    width: 800px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* чтобы изображения заполняли всю площадь без искажения */
+}

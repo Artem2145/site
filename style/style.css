@@ -602,7 +602,7 @@ hr.line {
 }
 
 .figure img {
-    max-width: 100%;
+    width: 10%;
     height: auto;
     border-radius: 5px;
 }
@@ -620,3 +620,21 @@ hr.line {
 }   
 
 
+.slideshow-container {
+    width: 800px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* чтобы изображения заполняли всю площадь без искажения */
+}
