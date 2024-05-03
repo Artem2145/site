@@ -583,7 +583,8 @@ hr.line {
 }
 
 .figure img {
-    width: 50%;
+    width: 30%;
+    height: 30%;
     height: auto;
 }
 
@@ -617,3 +618,5 @@ hr.line {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }   
+
+
