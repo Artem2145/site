@@ -98,6 +98,9 @@ header {
 .main-nav {
     display: flex;
     justify-content: space-between;
+    background-color: #f2f2f2;
+    padding: 50px;
+    border-radius: 40px;
 }
 
 .main-line {
@@ -114,6 +117,15 @@ header {
     align-items: center;
 
 
+}
+
+.excs {
+    color: #f2f2f2;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 80px;
+    
+    
 }
 
 .main-line li a {
@@ -146,7 +158,7 @@ header {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     unicode-bidi: isolate;
-    color: #808080;
+    color: black;
 }
 
 .main-top-container-min {
@@ -446,7 +458,9 @@ hr.line {
 @media screen and (max-width: 960px) {
     .main-line {
         justify-content: center;
+        flex-wrap: wrap;
     }
+
 }
 
 
@@ -458,30 +472,32 @@ hr.line {
         flex-direction: column;
         align-items: center;
         flex-wrap: wrap;
-        
+
     }
 
     .blue-block ul {
-       
+
         text-align: center;
         flex-wrap: wrap;
     }
 
     .blue-block li {
-       
+
         flex: 1 1 50%;
     }
 }
 
 
 
-* {box-sizing:border-box}
+* {
+    box-sizing: border-box
+}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
 }
 
 /* Hide the images by default */
@@ -490,83 +506,96 @@ hr.line {
 }
 
 /* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
 }
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
 }
 
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
 }
 
 /* The dots/bullets/indicators */
 .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
-  background-color: #717171;
+.active,
+.dot:hover {
+    background-color: #717171;
 }
 
 /* Fading animation */
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 
@@ -617,12 +646,12 @@ hr.line {
 .figure:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}   
+}
 
 
 .slideshow-container {
-    width: 800px;
-    height: 400px;
+    width: 100%;
+    height: 70%;
     position: relative;
     overflow: hidden;
 }
@@ -636,13 +665,32 @@ hr.line {
 .mySlides img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* чтобы изображения заполняли всю площадь без искажения */
+    object-fit: cover;
+    /* чтобы изображения заполняли всю площадь без искажения */
 }
 
-body{
+body {
     background-image: url(../image/bag.JPG);
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* фон будет фиксированным при прокрутке страницы */
-    height: 100vh; /* высота равна 100% высоты видимой области окна браузера */
+    background-attachment: fixed;
+    /* фон будет фиксированным при прокрутке страницы */
+    height: 100vh;
+    /* высота равна 100% высоты видимой области окна браузера */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
