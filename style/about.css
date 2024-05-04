@@ -94,7 +94,9 @@ header {
 .main-nav {
     display: flex;
     justify-content: space-between;
+    justify-content: center;
 }
+
 
 .main-line {
     display: flex;
@@ -337,7 +339,8 @@ header {
 }
 
 .footer-car img {
-    width: 300px;
+    width: 40%;
+    height: auto;
 }
 
 .footer-car p {

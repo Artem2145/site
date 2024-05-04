@@ -75,11 +75,12 @@ header{
 	text-decoration: none;
 }
 
-.main-nav{
+.main-nav {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 90px;
+    justify-content: center;
 }
+
 .main-line{
     display: flex;
     flex-wrap: wrap;
@@ -185,8 +186,9 @@ header{
 
 }
 
-.footer-car img{
-	width: 300px;
+.footer-car img {
+    width: 40%;
+    height: auto;
 }
 
 .footer-car p{

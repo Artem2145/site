@@ -99,7 +99,9 @@ header {
 .main-nav {
     display: flex;
     justify-content: space-between;
+    justify-content: center;
 }
+
 
 .main-line {
     display: flex;
@@ -296,7 +298,8 @@ a.button:hover {
 }
 
 .footer-car img {
-    max-width: 100%;
+    width: 40%;
+    height: auto;
 }
 
 .goto ul {

@@ -48,9 +48,7 @@ header {
     align-items: center;
 }
 
-.header-line {
-    background-color: black;
-}
+
 
 .header-line .wrapper {
     display: flex;
@@ -101,8 +99,8 @@ header {
     background-color: #f2f2f2;
     padding: 50px;
     border-radius: 40px;
+    justify-content: center;
 }
-
 .main-line {
     display: flex;
     flex-wrap: wrap;
@@ -115,8 +113,6 @@ header {
 .main-line li {
     display: flex;
     align-items: center;
-
-
 }
 
 .excs {
@@ -232,7 +228,8 @@ header {
 }
 
 .footer-car img {
-    width: 300px;
+    width: 40%;
+    height: auto;
 }
 
 .footer-car p {
@@ -474,6 +471,7 @@ hr.line {
 
 
 @media screen and (max-width: 500px) {
+    
     .blue-block {
         display: flex;
         flex-direction: column;
@@ -703,9 +701,15 @@ body {
 
 
 
+.mySlides  img {
+    max-width: 100%;
+    height: 400px;
+}
 
 
-
+.main{
+    margin-bottom: 50px;
+}
 
 
 
