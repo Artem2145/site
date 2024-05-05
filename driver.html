@@ -79,15 +79,20 @@
                     <label for="legal-status">Legal Status:</label>
                     <br>
                     <div id="legal-status">
-                        <input type="checkbox" id="citizen" name="legal-status" value="citizen">
+                        <input type="checkbox" id="citizen" name="legal-status" value="citizen" onclick="showSingleInput('citizen')">
                         <label for="citizen">Citizen</label><br>
-                        <input type="checkbox" id="green-card" name="legal-status" value="green-card">
+                        <input type="checkbox" id="green-card" name="legal-status" value="green-card" onclick="showSingleInput('green-card')">
                         <label for="green-card">Green Card</label><br>
-                        <input type="checkbox" id="work-authorization" name="legal-status" value="work-authorization">
+                        <input type="checkbox" id="work-authorization" name="legal-status" value="work-authorization" onclick="showSingleInput('work-authorization')">
                         <label for="work-authorization">Work Authorization</label><br>
-                        <input type="checkbox" id="other" name="legal-status" value="other">
+                        <input type="checkbox" id="other" name="legal-status" value="other" onclick="showSingleInput('other')">
                         <label for="other">Other</label><br>
                     </div>
+                </div>
+                
+                <div id="input-container" class="hidden">
+                    <label for="status-info">Yout text:</label>
+                    <input type="text" id="status-info" name="status-info">
                 </div>
 
                 <div class="form-group">
@@ -178,25 +183,27 @@
 
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var otherCheckbox = document.getElementById("other");
-            var checkboxes = document.querySelectorAll('input[type="checkbox"][name="legal-status"]');
-
-            otherCheckbox.addEventListener("change", function () {
-                if (this.checked) {
-                    checkboxes.forEach(function (checkbox) {
-                        if (checkbox !== otherCheckbox) {
-                            checkbox.disabled = true;
-                        }
-                    });
+        function showSingleInput(checkedId) {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            var inputContainer = document.getElementById('input-container');
+        
+            checkboxes.forEach(function(checkbox) {
+                if (checkbox.id !== checkedId) {
+                    checkbox.checked = false;
+                    checkbox.disabled = true; // Блокировка остальных чекбоксов
                 } else {
-                    checkboxes.forEach(function (checkbox) {
-                        checkbox.disabled = false;
-                    });
+                    checkbox.disabled = false; // Разблокировка выбранного чекбокса
                 }
             });
-        });
+        
+            if (document.getElementById(checkedId).checked) {
+                inputContainer.classList.remove('hidden');
+            } else {
+                inputContainer.classList.add('hidden');
+            }
+        }
     </script>
+    
 
 
 </body>

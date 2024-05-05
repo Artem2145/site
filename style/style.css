@@ -145,6 +145,45 @@ header {
     transition: background-color 0.3s, color 0.3s;
 }
 
+
+
+.main-nav {
+    width: 60%; /* Пример: установите желаемую ширину */
+    margin: 0 auto; /* Центрирование */
+    /* Дополнительные стили */
+}
+
+.main-nav .main-line {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav .main-line li {
+    display: inline-block;
+    margin-right: 10px; /* Пример: уменьшите отступы между элементами */
+}
+
+.main-nav .main-line li:last-child {
+    margin-right: 0; /* Убираем отступ справа у последнего элемента */
+}
+
+.main-nav .main-line li a {
+    text-decoration: none;
+    color: #333; /* Цвет ссылок */
+    font-size: 14px; /* Размер шрифта */
+}
+
+
+
+
+
+
+
+
+
+
+
 .main-top-container p {
     position: relative;
     line-height: 26px;
@@ -456,10 +495,7 @@ hr.line {
     .main-line {
         justify-content: center;
     }
-    .main-line {
-        display: flex;
-        flex-wrap: wrap; /* Розбиває на дві колонки */
-    }
+    
     
     .main-line li {
         flex: 1 50%; /* Кожен пункт займає половину ширини батьківського контейнера */
@@ -471,6 +507,10 @@ hr.line {
 
 
 @media screen and (max-width: 500px) {
+    .main-nav {
+        width: 80%;
+        margin: 0 auto; 
+    }
     
     .blue-block {
         display: flex;
@@ -511,6 +551,7 @@ hr.line {
 /* Slideshow container */
 .slideshow-container {
     max-width: 1000px;
+    max-width: 400px;
     position: relative;
     margin: auto;
 }
@@ -646,7 +687,7 @@ hr.line {
 }
 
 .figure img {
-    width: 10%;
+    width: 70px;   
     height: auto;
     border-radius: 5px;
 }
@@ -701,10 +742,7 @@ body {
 
 
 
-.mySlides  img {
-    max-width: 100%;
-    height: 400px;
-}
+
 
 
 .main{
@@ -712,7 +750,95 @@ body {
 }
 
 
+/* Обертка слайд-шоу */
+.slideshow-container {
+    max-width: 1000px; /* Максимальная ширина контейнера */
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Изображения в слайд-шоу */
+.mySlides {
+    display: none;
+    max-width: 100%; /* Изображение не будет больше контейнера */
+}
+
+/* Кнопки "Предыдущий" и "Следующий" слайд */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Позиционирование кнопки "Предыдущий" */
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Позиционирование кнопки "Следующий" */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Кружочки-индикаторы текущего слайда */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/* Активный кружочек-индикатор */
+.active, .dot:hover {
+    background-color: #717171;
+}
 
 
+/* Обертка слайд-шоу */
+.slideshow-container {
+    max-width: 1000px; /* Максимальная ширина контейнера */
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    height: 400px; /* Фиксированная высота контейнера */
+}
+
+/* Изображения в слайд-шоу */
+.mySlides {
+    display: none;
+    max-width: 100%; /* Изображение не будет больше контейнера */
+    height: 100%; /* Изображение займет всю высоту контейнера */
+    object-fit: cover; /* Заполнение контейнера, сохраняя соотношение сторон и обрезая изображение */
+}
+
+@media only screen and (max-width: 600px) {
+    .slideshow-container {
+        height: 200px; /* Уменьшенная высота контейнера для мобильных устройств */
+    }
+}
 
 
+/* Для маленьких экранов (мобильные устройства) */
+@media only screen and (max-width: 600px) {
+    .footer-car img {
+        width: 500px; /* Уменьшение ширины изображения до 50% */
+        margin: 0 auto; /* Центрирование изображения */
+    }
+
+    
+}

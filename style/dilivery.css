@@ -510,3 +510,14 @@ hr.line {
     }
 }
 
+/* CSS стили */
+#legal-status {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px; /* Расстояние между чекбоксами и текстом */
+}

@@ -457,3 +457,7 @@ label {
     vertical-align: middle;
     margin-right: 10px; /* Расстояние между чекбоксами и текстом */
 }
+
+.hidden {
+    display: none;
+}
