@@ -521,3 +521,42 @@ label {
     vertical-align: middle;
     margin-right: 10px; /* Расстояние между чекбоксами и текстом */
 }
+
+
+
+.gotop::before {
+    position: absolute;
+    content: "";
+    background-image: url('../image/home.png');
+    background-size: cover;
+    left: -30px;
+    top: -4px;
+
+    width: 20px;
+    height: 20px;
+}
+
+
+.goab::before {
+    position: absolute;
+    content: "";
+    background-image: url('../image/about-us.svg');
+    background-size: cover;
+    left: -30px;
+    top: -4px;
+
+    width: 20px;
+    height: 20px;
+}
+
+.goon::before {
+    position: absolute;
+    content: "";
+    background-image: url('../image/contact.png');
+    background-size: cover;
+    left: -30px;
+    top: -4px;
+
+    width: 20px;
+    height: 20px;
+}

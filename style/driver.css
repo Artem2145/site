@@ -151,7 +151,8 @@ form {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 400px;
-    margin: 20px auto; /* Додав відступи по вертикалі та горизонталі */
+    margin: 20px auto;
+    /* Додав відступи по вертикалі та горизонталі */
 }
 
 /* Стилі для заголовка h4 */
@@ -167,7 +168,8 @@ form h4 {
 form p {
     font-weight: bold;
     color: #555;
-    margin-bottom: 10px; /* Зменшив відступ між параграфами */
+    margin-bottom: 10px;
+    /* Зменшив відступ між параграфами */
 }
 
 /* Стилі для текстових полів */
@@ -175,10 +177,11 @@ form input[type="text"],
 form input[type="date"],
 form input[type="time"],
 form input[type="email"],
-form input[type="tel"]{
+form input[type="tel"] {
     width: calc(100% - 20px);
     padding: 8px 10px;
-    margin-bottom: 15px; /* Збільшив відступ між текстовими полями */
+    margin-bottom: 15px;
+    /* Збільшив відступ між текстовими полями */
     border-radius: 5px;
     border: 1px solid #ccc;
 }
@@ -192,7 +195,8 @@ form input[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
-    margin-top: 15px; /* Збільшив відступ перед кнопкою */
+    margin-top: 15px;
+    /* Збільшив відступ перед кнопкою */
     font-size: 16px;
 }
 
@@ -205,23 +209,32 @@ form input[type="submit"]:hover {
 form div {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px; /* Збільшив відступ між елементами форми */
+    margin-bottom: 20px;
+    /* Збільшив відступ між елементами форми */
 }
 
 /* Стилі для посилання */
 a.button {
-    display: inline-block; /* Зробити елемент блоковим */
-    background-color: #007bff; /* Синій колір посилання */
-    color: white; /* Білий колір тексту */
-    padding: 10px 15px; /* Величина внутрішнього відступу */
-    text-decoration: none; /* Відсутність підкреслення */
-    border-radius: 5px; /* Закруглені кути */
-    transition: background-color 0.3s; /* Плавне змінювання кольору при наведенні */
+    display: inline-block;
+    /* Зробити елемент блоковим */
+    background-color: #007bff;
+    /* Синій колір посилання */
+    color: white;
+    /* Білий колір тексту */
+    padding: 10px 15px;
+    /* Величина внутрішнього відступу */
+    text-decoration: none;
+    /* Відсутність підкреслення */
+    border-radius: 5px;
+    /* Закруглені кути */
+    transition: background-color 0.3s;
+    /* Плавне змінювання кольору при наведенні */
 }
 
 /* Стилі для посилання при наведенні */
 a.button:hover {
-    background-color: #0056b3; /* Змінюємо колір посилання при наведенні */
+    background-color: #0056b3;
+    /* Змінюємо колір посилання при наведенні */
 }
 
 .form-job {
@@ -230,13 +243,15 @@ a.button:hover {
 
 h4 {
     text-align: center;
-    color: #333; /* Колір тексту */
-    margin-top: 20px; /* Відступ зверху */
+    color: #333;
+    /* Колір тексту */
+    margin-top: 20px;
+    /* Відступ зверху */
 }
 
 
-.footer{
-	background-color: #2E4961; 
+.footer {
+    background-color: #2E4961;
 
 }
 
@@ -244,9 +259,10 @@ h4 {
     width: 40%;
     height: auto;
 }
-.footer-car p{
-	line-height: 26px;
-	display: block;
+
+.footer-car p {
+    line-height: 26px;
+    display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
@@ -273,8 +289,8 @@ h4 {
 
 .footer-car,
 .goto {
-    flex-basis: calc(50% - 20px); 
-    margin-right: 20px; 
+    flex-basis: calc(50% - 20px);
+    margin-right: 20px;
 }
 
 .footer-car img {
@@ -296,20 +312,21 @@ h4 {
 }
 
 .goto p {
-	line-height: 26px;
-	display: block;
+    line-height: 26px;
+    display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     unicode-bidi: isolate;
     color: #808080;
-    
+
     margin-top: 20px;
 }
-.goto h5{
-	padding-bottom: 30px;
-	font-size: 14px;
+
+.goto h5 {
+    padding-bottom: 30px;
+    font-size: 14px;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     margin: 0;
@@ -320,46 +337,49 @@ h4 {
 
 
 .goto li::before {
-	position: absolute;
-    content: ""; 
+    position: absolute;
+    content: "";
     background-image: url('../image/home.png');
-    background-size: cover; 
+    background-size: cover;
     left: -30px;
     top: -4px;
-    
+
     width: 20px;
     height: 20px;
 }
 
 
 .goto ul li a:hover {
-    color: #1e90ff; 
+    color: #1e90ff;
     transition: 0.4s;
 }
 
 
 hr.line {
     border: 0;
-    height: 1px; /* Товщина лінії */
-    background-color: #BAC3CB; /* Колір лінії */
-    margin: 10px 0; /* Відступи навколо лінії */
+    height: 1px;
+    /* Товщина лінії */
+    background-color: #BAC3CB;
+    /* Колір лінії */
+    margin: 10px 0;
+    /* Відступи навколо лінії */
 }
 
 
-.footer-bootom-contain{
-	display: flex;
-	align-items: center;
+.footer-bootom-contain {
+    display: flex;
+    align-items: center;
 }
 
-.footer-line{
-	border-top: 1px solid rgba(255, 255, 255, 0.25);
+.footer-line {
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
     padding: 20px 0 12px;
 }
 
 
-.footer-bootom-contain-text p{
-	line-height: 26px;
-	display: block;
+.footer-bootom-contain-text p {
+    line-height: 26px;
+    display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
@@ -373,7 +393,7 @@ hr.line {
 
 
 
-.footer-bootom-contain{
+.footer-bootom-contain {
     display: flex;
     justify-content: space-between;
 }
@@ -381,13 +401,17 @@ hr.line {
 .footer-bootom-contain-button a {
     display: inline-block;
     background-color: transparent;
-    margin-right: 10px; /* Відступ між кнопками */
+    margin-right: 10px;
+    /* Відступ між кнопками */
 }
 
 .footer-bootom-contain-button img {
-    width: 30px; /* Ширина картинок */
-    height: auto; /* Автоматична висота */
-    border-radius: 50%; /* Кругла форма */
+    width: 30px;
+    /* Ширина картинок */
+    height: auto;
+    /* Автоматична висота */
+    border-radius: 50%;
+    /* Кругла форма */
 }
 
 .email-button img {
@@ -396,7 +420,7 @@ hr.line {
 }
 
 .phone-button img {
-   
+
     padding: 1px;
 }
 
@@ -409,40 +433,42 @@ hr.line {
 
 
 
-.main{
+.main {
     margin-bottom: 50px;
 }
 
 
 
-@media screen and (max-width: 400px){
-    .main-top-img img{
+@media screen and (max-width: 400px) {
+    .main-top-img img {
         width: 80px;
         height: 80px;
     }
-  }
+}
 
 @media screen and (max-width: 700px) {
-    .header-line li{
+    .header-line li {
         margin-right: 0px;
     }
-    .info{
+
+    .info {
         justify-content: center;
     }
-    .wrapper{
+
+    .wrapper {
         width: 95%;
     }
 
 
-    
-  }
+
+}
 
 
-  @media screen and (max-width: 960px){
-    .main-line{
+@media screen and (max-width: 960px) {
+    .main-line {
         justify-content: center;
     }
-  }
+}
 
 
 
@@ -455,9 +481,48 @@ hr.line {
 label {
     display: inline-block;
     vertical-align: middle;
-    margin-right: 10px; /* Расстояние между чекбоксами и текстом */
+    margin-right: 10px;
+    /* Расстояние между чекбоксами и текстом */
 }
 
 .hidden {
     display: none;
+}
+
+
+.gotop::before {
+    position: absolute;
+    content: "";
+    background-image: url('../image/home.png');
+    background-size: cover;
+    left: -30px;
+    top: -4px;
+
+    width: 20px;
+    height: 20px;
+}
+
+
+.goab::before {
+    position: absolute;
+    content: "";
+    background-image: url('../image/about-us.svg');
+    background-size: cover;
+    left: -30px;
+    top: -4px;
+
+    width: 20px;
+    height: 20px;
+}
+
+.goon::before {
+    position: absolute;
+    content: "";
+    background-image: url('../image/phone.png');
+    background-size: cover;
+    left: -30px;
+    top: -4px;
+
+    width: 20px;
+    height: 20px;
 }
