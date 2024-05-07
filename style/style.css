@@ -869,10 +869,30 @@ body {
 }
 
 
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    height: 520px; /* Фіксована висота контейнера */
+}
 
 
-/* test*/
+/* Для екранів шириною менше 600px */
+@media only screen and (max-width: 600px) {
+    .slideshow-container {
+        height: 200px;
+        /* Установіть висоту, яка вам підходить для малих екранів */
+    }
+
+    .prev, .next {
+        font-size: 12px;
+        /* Зменште розмір шрифту для кнопок попереднього і наступного слайда */
+    }
+}
+
+/* Додайте інші медіа-запити, які вам потрібні для інших розмірів екрану */
 
 
 
-/* test */
+

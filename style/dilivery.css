@@ -562,9 +562,17 @@ label {
 }
 
 body {
-    background-image: url(../image/bag-driver.jpg);
+    background-image: url(../image/bag-driver.JPG);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
+}
+
+
+
+.form-dilivery {
+    background-color: rgba(255, 255, 255, 0.5); /* Background color with opacity */
+    color: rgba(0, 0, 0, 0.8); /* Text color with increased opacity */
+    padding: 20px;
 }
