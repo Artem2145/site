@@ -622,7 +622,7 @@ hr.line {
 
 @media only screen and (max-width: 600px) {
     .slideshow-container {
-        height: 200px; /* Уменьшенная высота контейнера для мобильных устройств */
+        height: 200px; 
     }
 }
 @media screen and (max-width: 400px) {

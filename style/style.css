@@ -101,6 +101,7 @@ header {
     border-radius: 40px;
     justify-content: center;
 }
+
 .main-line {
     display: flex;
     flex-wrap: wrap;
@@ -120,8 +121,8 @@ header {
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
     font-size: 80px;
-    
-    
+
+
 }
 
 .main-line li a {
@@ -148,8 +149,10 @@ header {
 
 
 .main-nav {
-    width: 60%; /* Пример: установите желаемую ширину */
-    margin: 0 auto; /* Центрирование */
+    width: 60%;
+    /* Пример: установите желаемую ширину */
+    margin: 0 auto;
+    /* Центрирование */
     /* Дополнительные стили */
 }
 
@@ -161,17 +164,21 @@ header {
 
 .main-nav .main-line li {
     display: inline-block;
-    margin-right: 10px; /* Пример: уменьшите отступы между элементами */
+    margin-right: 10px;
+    /* Пример: уменьшите отступы между элементами */
 }
 
 .main-nav .main-line li:last-child {
-    margin-right: 0; /* Убираем отступ справа у последнего элемента */
+    margin-right: 0;
+    /* Убираем отступ справа у последнего элемента */
 }
 
 .main-nav .main-line li a {
     text-decoration: none;
-    color: #333; /* Цвет ссылок */
-    font-size: 14px; /* Размер шрифта */
+    color: #333;
+    /* Цвет ссылок */
+    font-size: 14px;
+    /* Размер шрифта */
 }
 
 
@@ -495,11 +502,13 @@ hr.line {
     .main-line {
         justify-content: center;
     }
-    
-    
+
+
     .main-line li {
-        flex: 1 50%; /* Кожен пункт займає половину ширини батьківського контейнера */
-        text-align: center; /* Вирівнює текст по центру */
+        flex: 1 50%;
+        /* Кожен пункт займає половину ширини батьківського контейнера */
+        text-align: center;
+        /* Вирівнює текст по центру */
     }
 }
 
@@ -509,9 +518,9 @@ hr.line {
 @media screen and (max-width: 500px) {
     .main-nav {
         width: 80%;
-        margin: 0 auto; 
+        margin: 0 auto;
     }
-    
+
     .blue-block {
         display: flex;
         flex-direction: column;
@@ -530,16 +539,20 @@ hr.line {
 
         flex: 1 1 50%;
     }
+
     .main-line {
         display: flex;
-        flex-wrap: wrap; /* Розбиває на дві колонки */
+        flex-wrap: wrap;
+        /* Розбиває на дві колонки */
     }
-    
+
     .main-line li {
-        flex: 1 50%; /* Кожен пункт займає половину ширини батьківського контейнера */
-        text-align: center; /* Вирівнює текст по центру */
+        flex: 1 50%;
+        /* Кожен пункт займає половину ширини батьківського контейнера */
+        text-align: center;
+        /* Вирівнює текст по центру */
     }
-    
+
 }
 
 
@@ -687,7 +700,7 @@ hr.line {
 }
 
 .figure img {
-    width: 70px;   
+    width: 70px;
     height: auto;
     border-radius: 5px;
 }
@@ -732,7 +745,7 @@ body {
     height: 100vh;
 }
 
-.main-nav{
+.main-nav {
     border-radius: 70px;
     padding: 20px;
 }
@@ -745,14 +758,15 @@ body {
 
 
 
-.main{
+.main {
     margin-bottom: 50px;
 }
 
 
 /* Обертка слайд-шоу */
 .slideshow-container {
-    max-width: 1000px; /* Максимальная ширина контейнера */
+    max-width: 1000px;
+    /* Максимальная ширина контейнера */
     position: relative;
     margin: auto;
     overflow: hidden;
@@ -761,11 +775,13 @@ body {
 /* Изображения в слайд-шоу */
 .mySlides {
     display: none;
-    max-width: 100%; /* Изображение не будет больше контейнера */
+    max-width: 100%;
+    /* Изображение не будет больше контейнера */
 }
 
 /* Кнопки "Предыдущий" и "Следующий" слайд */
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -804,31 +820,38 @@ body {
 }
 
 /* Активный кружочек-индикатор */
-.active, .dot:hover {
+.active,
+.dot:hover {
     background-color: #717171;
 }
 
 
 /* Обертка слайд-шоу */
 .slideshow-container {
-    max-width: 1000px; /* Максимальная ширина контейнера */
+    max-width: 1000px;
+    /* Максимальная ширина контейнера */
     position: relative;
     margin: auto;
     overflow: hidden;
-    height: 400px; /* Фиксированная высота контейнера */
+    height: 400px;
+    /* Фиксированная высота контейнера */
 }
 
 /* Изображения в слайд-шоу */
 .mySlides {
     display: none;
-    max-width: 100%; /* Изображение не будет больше контейнера */
-    height: 100%; /* Изображение займет всю высоту контейнера */
-    object-fit: cover; /* Заполнение контейнера, сохраняя соотношение сторон и обрезая изображение */
+    max-width: 100%;
+    /* Изображение не будет больше контейнера */
+    height: 100%;
+    /* Изображение займет всю высоту контейнера */
+    object-fit: cover;
+    /* Заполнение контейнера, сохраняя соотношение сторон и обрезая изображение */
 }
 
 @media only screen and (max-width: 600px) {
     .slideshow-container {
-        height: 200px; /* Уменьшенная высота контейнера для мобильных устройств */
+        height: 200px;
+        /* Уменьшенная высота контейнера для мобильных устройств */
     }
 }
 
@@ -836,15 +859,20 @@ body {
 /* Для маленьких экранов (мобильные устройства) */
 @media only screen and (max-width: 600px) {
     .footer-car img {
-        width: 500px; /* Уменьшение ширины изображения до 50% */
-        margin: 0 auto; /* Центрирование изображения */
+        width: 500px;
+        /* Уменьшение ширины изображения до 50% */
+        margin: 0 auto;
+        /* Центрирование изображения */
     }
 
-    
+
 }
 
 
 
 
+/* test*/
 
 
+
+/* test */

@@ -560,3 +560,11 @@ label {
     width: 20px;
     height: 20px;
 }
+
+body {
+    background-image: url(../image/bag-driver.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+}
