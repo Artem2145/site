@@ -48,9 +48,6 @@ header {
     align-items: center;
 }
 
-.header-line {
-    background-color: #808080;
-}
 
 .header-line .wrapper {
     display: flex;
@@ -106,7 +103,9 @@ header {
     flex-wrap: wrap;
 
 }
-
+h4.form-job{
+    color: white;
+}
 .main-line nav {
     list-style: none;
 }
@@ -131,16 +130,14 @@ header {
 }
 
 
-.main-line li a:hover {
-    background-color: #f8f8f8;
-    transform: scale(1.1);
-    color: #333;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+
+
+
+form.form-container {
+    background-color: rgba(255, 255, 255, 0.5); 
+    color: rgba(0, 0, 0, 0.8); 
+    padding: 20px;
 }
-
-
-
 
 
 
@@ -525,4 +522,66 @@ label {
 
     width: 20px;
     height: 20px;
+}
+
+
+
+
+
+
+body {
+    background-image: url(../image/basg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right;
+    height: 100vh;
+}
+
+
+
+
+.form-dilivery {
+    background-color: rgba(255, 255, 255, 0.5); 
+    color: rgba(0, 0, 0, 0.8); 
+    padding: 20px;
+}
+
+
+
+nav.main-line a {
+    position: relative; /* Потрібно для абсолютного позиціонування підкреслення */
+}
+
+nav.main-line a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Розташування підкреслення під текстом */
+    width: 100%; /* Ширина підкреслення на всю ширину тексту */
+    height: 2px; /* Товщина підкреслення */
+    background-color: transparent; /* Початковий колір підкреслення */
+    transition: background-color 0.3s; /* Плавна анімація */
+}
+
+nav.main-line a:hover::after {
+    background-color: #1e90ff; /* Колір підкреслення при наведенні */
+    transition: 0.5s;
+}
+
+.main-line li{
+    font-size: 17px;
+}
+
+.footer-car img {
+    width: 30%;
+    height: auto;
+}
+
+
+
+nav.main-line li a {
+    font-weight: bold; /* Жирний шрифт */
+    color: white; /* Білий колір тексту */
+    text-decoration: none; /* Відключення підкреслення */
 }
