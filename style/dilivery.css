@@ -135,13 +135,7 @@ header {
 }
 
 
-.main-line li a:hover {
-    background-color: #f8f8f8;
-    transform: scale(1.1);
-    color: #333;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-}
+
 
 
 .form-dilivery {
@@ -582,3 +576,27 @@ body {
     padding: 20px;
 }
 
+
+
+nav.main-line a {
+    position: relative; /* Потрібно для абсолютного позиціонування підкреслення */
+}
+
+nav.main-line a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Розташування підкреслення під текстом */
+    width: 100%; /* Ширина підкреслення на всю ширину тексту */
+    height: 2px; /* Товщина підкреслення */
+    background-color: transparent; /* Початковий колір підкреслення */
+    transition: background-color 0.3s; /* Плавна анімація */
+}
+
+nav.main-line a:hover::after {
+    background-color: #1e90ff; /* Колір підкреслення при наведенні */
+}
+
+.main-line li{
+    font-size: 17px;
+}
