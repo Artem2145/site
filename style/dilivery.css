@@ -595,8 +595,22 @@ nav.main-line a::after {
 
 nav.main-line a:hover::after {
     background-color: #1e90ff; /* Колір підкреслення при наведенні */
+    transition: 0.5s;
 }
 
 .main-line li{
     font-size: 17px;
+}
+
+.footer-car img {
+    width: 30%;
+    height: auto;
+}
+
+
+
+nav.main-line li a {
+    font-weight: bold; /* Жирний шрифт */
+    color: white; /* Білий колір тексту */
+    text-decoration: none; /* Відключення підкреслення */
 }
