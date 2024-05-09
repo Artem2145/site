@@ -801,3 +801,7 @@ body {
     background-color: #1e90ff;
     transition: 0.5s;
 }
+.footer-car img {
+    width: 40%;
+    height: auto;
+}

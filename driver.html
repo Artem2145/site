@@ -35,9 +35,6 @@
                         <li>
                             <a href="dilivery.html" class="header__link">GET A QUOTE</a>
                         </li>
-                        <li>
-                            <a href="team.html" class="header__link">TEAM</a>
-                        </li>
                     </ul>
                 </nav>
             </div>
@@ -167,7 +164,7 @@
             <div class="footer-line"></div>
             <div class="footer-bootom-contain">
                 <div class="footer-bootom-contain-text">
-                    <p>Copyright © 2019. Express Ship Plus Inc. All rights reserved</p>
+                    <p>Expedited Solutions Partner.</p>
                 </div>
 
                 <div class="footer-bootom-contain-button">
@@ -184,24 +181,20 @@
 
 
 
+
     <script>
-        let menu_button = document.querySelector('.header__burger');
-        let menu_itself = document.querySelector('.header__menu');
-        let menu_list = document.querySelector('.header__list');
-        let body = document.querySelector('body');
-
-        menu_button.onclick = function () {
-            menu_button.classList.toggle('active');
-            menu_itself.classList.toggle('active');
-            body.classList.toggle('lock');
-        };
-
-        menu_list.onclick = function () {
-            menu_button.classList.toggle('active');
-            menu_itself.classList.toggle('active');
-            body.classList.toggle('lock');
-        };
+        const other = document.querySelector('#other');
+        const checkboxes = [...document.querySelectorAll('input[type="checkbox"]')].filter(item => item !== other);
+        const container = document.querySelector('#input-container');
+        other.onchange = () => {
+            checkboxes.forEach(input => {
+                input.disabled = other.checked;
+                input.checked = false;
+                other.checked ? container.classList.remove('hidden') : container.classList.add('hidden');
+            })
+        }
     </script>
+
 
 
 
