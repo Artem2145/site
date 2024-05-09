@@ -907,3 +907,43 @@ body {
 
 
 
+.figure-team-block p{
+    color: #BAC3CB;
+}
+
+.figure-team-block figure {
+    text-align: center;
+}
+
+.figure-team-block figure img {
+    width: 200px; /* встановлюємо ширину картинки */
+    height: 200px; /* встановлюємо висоту картинки */
+    border-radius: 820px; /* створюємо круглу форму */
+    object-fit: cover;
+    /* зберігаємо пропорції і обрізаємо зайве */
+    margin-bottom: 10px; /* додатковий відступ для відділення від наступного блоку */
+}
+
+
+.figure-group-team {
+    text-align: center; /* центруємо вміст по горизонталі */
+}
+
+.figure-team-block {
+    display: flex; /* розміщуємо елементи в ряд */
+    flex-wrap: wrap; /* обгортаємо, коли не вміщаються в один ряд */
+    justify-content: center; /* центруємо елементи по горизонталі */
+    gap: 20px; /* Встановлюємо відступи між фігурами */
+}
+
+.figure-team-block figure {
+    margin: 0 10px; /* додаємо відступи між елементами */
+}
+
+
+.figure-group-title{
+    color: white;
+    margin-bottom: 30px;
+    font-size: 25px;
+
+}
