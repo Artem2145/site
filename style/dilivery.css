@@ -868,3 +868,21 @@ body {
         margin-left: 0;
     }
 }
+@media screen and (max-width: 768px) {
+    .form-dilivery {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .form-dilivery p,
+    .form-dilivery input,
+    .form-dilivery label {
+        width: 100%;
+        margin: 5px 0; /* Додатковий відступ між елементами */
+    }
+    
+    .form-dilivery .first-form {
+        margin-top: 20px; /* Додатковий відступ між першою і другою формами */
+    }
+}
