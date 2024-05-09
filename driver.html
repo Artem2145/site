@@ -9,36 +9,39 @@
 </head>
 
 <body>
-    <header>
-
-		<div class="header-line">
-			<div class="wrapper">
-
-
-				<div class="logo">
-
-					<a href="index.html"><img src="image/logo.png" alt="logo"></a>
-				</div>
-				<div class="header__burger">
-					<span></span>
-				</div>
-				<div class="main-nav">
-
-					<nav class="main-line">
-						<li><a href="index.html">HOME</a></li>
-						<li><a href="about.html">ABOUT US</a></li>
-						<li><a href="contact.html">CONTACT</a></li>
-						<li><a href="driver.html">DRIVER</a></li>
-						<li><a href="dilivery.html">GET A QUOTE</a></li>
-					</nav>
-				</div>
-
-
-			</div>
-
-		</div>
-
-	</header>
+    <header class="header">
+        <div class="container">
+            <div class="header__body">
+                <a href="#" class="header__logo">
+                    <img src="image/logo.png" alt="logo">
+                </a>
+                <div class="header__burger">
+                    <span></span>
+                </div>
+                <nav class="header__menu">
+                    <ul class="header__list">
+                        <li>
+                            <a href="index.html" class="header__link">HOME</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="header__link">ABOUT US</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="header__link">CONTACT</a>
+                        </li>
+                        <li>
+                            <a href="driver.html" class="header__link">DRIVER</a>
+                        </li>
+                        <li>
+                            <a href="dilivery.html" class="header__link">GET A QUOTE</a>
+                        </li>
+                        <li>
+                            <a href="team.html" class="header__link">TEAM</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+    </header>
 
     <main class="main">
 
@@ -74,17 +77,21 @@
                     <label for="legal-status">Legal Status:</label>
                     <br>
                     <div id="legal-status">
-                        <input type="checkbox" id="citizen" name="legal-status" value="citizen" onclick="showSingleInput('citizen')">
+                        <input type="checkbox" id="citizen" name="legal-status" value="citizen"
+                            onclick="showSingleInput('citizen')">
                         <label for="citizen">Citizen</label><br>
-                        <input type="checkbox" id="green-card" name="legal-status" value="green-card" onclick="showSingleInput('green-card')">
+                        <input type="checkbox" id="green-card" name="legal-status" value="green-card"
+                            onclick="showSingleInput('green-card')">
                         <label for="green-card">Green Card</label><br>
-                        <input type="checkbox" id="work-authorization" name="legal-status" value="work-authorization" onclick="showSingleInput('work-authorization')">
+                        <input type="checkbox" id="work-authorization" name="legal-status" value="work-authorization"
+                            onclick="showSingleInput('work-authorization')">
                         <label for="work-authorization">Work Authorization</label><br>
-                        <input type="checkbox" id="other" name="legal-status" value="other" onclick="showSingleInput('other')">
+                        <input type="checkbox" id="other" name="legal-status" value="other"
+                            onclick="showSingleInput('other')">
                         <label for="other">Other</label><br>
                     </div>
                 </div>
-                
+
                 <div id="input-container" class="hidden">
                     <label for="status-info">Yout text:</label>
                     <input type="text" id="status-info" name="status-info">
@@ -108,25 +115,25 @@
                     <input type="date" id="start-date" name="start-date">
                 </div>
 
-                
+
                 <form class="form-container">
                     <form action="#">
                         <label for="gender">Gender:</label>
                         <select id="gender" name="gender">
-                       
-                          <option value="male">male</option>
-                          <option value="female">female</option>
-                          <option value="not">not specified</option>
-                          
+
+                            <option value="male">male</option>
+                            <option value="female">female</option>
+                            <option value="not">not specified</option>
+
                         </select>
                         <input type="submit" value="Submit" />
-                  </form>
+                    </form>
                 </form>
             </form>
 
-            
 
-           
+
+
 
     </main>
 
@@ -178,27 +185,24 @@
 
 
     <script>
-        function showSingleInput(checkedId) {
-            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-            var inputContainer = document.getElementById('input-container');
-        
-            checkboxes.forEach(function(checkbox) {
-                if (checkbox.id !== checkedId) {
-                    checkbox.checked = false;
-                    checkbox.disabled = true; // Блокировка остальных чекбоксов
-                } else {
-                    checkbox.disabled = false; // Разблокировка выбранного чекбокса
-                }
-            });
-        
-            if (document.getElementById(checkedId).checked) {
-                inputContainer.classList.remove('hidden');
-            } else {
-                inputContainer.classList.add('hidden');
-            }
-        }
+        let menu_button = document.querySelector('.header__burger');
+        let menu_itself = document.querySelector('.header__menu');
+        let menu_list = document.querySelector('.header__list');
+        let body = document.querySelector('body');
+
+        menu_button.onclick = function () {
+            menu_button.classList.toggle('active');
+            menu_itself.classList.toggle('active');
+            body.classList.toggle('lock');
+        };
+
+        menu_list.onclick = function () {
+            menu_button.classList.toggle('active');
+            menu_itself.classList.toggle('active');
+            body.classList.toggle('lock');
+        };
     </script>
-    
+
 
 
 </body>
