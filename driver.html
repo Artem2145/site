@@ -184,33 +184,35 @@
 
     <script>
         const other = document.querySelector('#other');
-        const checkboxes = [...document.querySelectorAll('input[type="checkbox"]')].filter(item => item !== other);
+        const radios = [...document.querySelectorAll('input[type="radio"]')].filter(item => item !== other);
         const container = document.querySelector('#input-container');
+
         other.onchange = () => {
-            checkboxes.forEach(input => {
+            radios.forEach(input => {
                 input.disabled = other.checked;
                 input.checked = false;
                 other.checked ? container.classList.remove('hidden') : container.classList.add('hidden');
-            })
-        }
+            });
+        };
+
 
 
         let menu_button = document.querySelector('.header__burger');
-		let menu_itself = document.querySelector('.header__menu');
-		let menu_list = document.querySelector('.header__list');
-		let body = document.querySelector('body');
+        let menu_itself = document.querySelector('.header__menu');
+        let menu_list = document.querySelector('.header__list');
+        let body = document.querySelector('body');
 
-		menu_button.onclick = function () {
-			menu_button.classList.toggle('active');
-			menu_itself.classList.toggle('active');
-			body.classList.toggle('lock');
-		};
+        menu_button.onclick = function () {
+            menu_button.classList.toggle('active');
+            menu_itself.classList.toggle('active');
+            body.classList.toggle('lock');
+        };
 
-		menu_list.onclick = function () {
-			menu_button.classList.toggle('active');
-			menu_itself.classList.toggle('active');
-			body.classList.toggle('lock');
-		};
+        menu_list.onclick = function () {
+            menu_button.classList.toggle('active');
+            menu_itself.classList.toggle('active');
+            body.classList.toggle('lock');
+        };
     </script>
 
 

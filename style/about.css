@@ -1208,12 +1208,7 @@ body {
 }
 
 .header__menu.active .header__list {
-    margin-top: 100px; /* Зсув на 50px вниз */
-}
-
-
-.header__menu.active .header__list {
-    margin-top: 100px; /* Зсув на 50px вниз */
+    margin-top: 50px; /* Зсув на 50px вниз */
 }
 
 
@@ -1237,6 +1232,3 @@ body {
     }
 }
 
-.pp{
-
-}

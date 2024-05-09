@@ -964,3 +964,31 @@ body {
 .footer {
     padding-top: 10px; /* відступи всередині футера */
 }
+
+
+
+
+
+@media (max-width: 767px) {
+    .main-nav {
+        background: none;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-line {
+        display: flex;
+        padding: 0;
+        list-style: none;
+    }
+
+    .main-line li {
+        margin-right: 10px;
+    }
+
+    .main-line li:last-child {
+        margin-right: 0;
+    }
+}
