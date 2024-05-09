@@ -1039,7 +1039,7 @@ body {
 }
 
 .header__link {
-    color: #fff;
+    color: firebrick;
     text-transform: uppercase;
     font-size: 18px;
     text-decoration: none;
@@ -1068,7 +1068,7 @@ body {
     }
 
     .header__burger span {
-        background-color: #fff;
+        background-color: black;
         position: absolute;
         width: 100%;
         height: 2px;
@@ -1080,7 +1080,7 @@ body {
     .header__burger:before,
     .header__burger:after {
         content: '';
-        background-color: #fff;
+        background-color: black;
         position: absolute;
         width: 100%;
         height: 2px;
@@ -1228,4 +1228,15 @@ body {
         font-size: 12px;
         /* Зменште розмір шрифту для кнопок попереднього і наступного слайда */
     }
+}
+
+
+@media (max-width: 800px) {
+    .footer-car img {
+        width: 300px; /* новий розмір картинки при ширині від 800px */
+    }
+}
+
+.pp{
+
 }

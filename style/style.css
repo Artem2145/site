@@ -952,3 +952,15 @@ body {
     width: 30%;
     height: auto;
 }
+
+
+@media (max-width: 800px) {
+    .footer-car img {
+        width: 300px; /* новий розмір картинки при ширині від 800px */
+    }
+}
+
+
+.footer {
+    padding-top: 10px; /* відступи всередині футера */
+}
