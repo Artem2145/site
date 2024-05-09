@@ -514,7 +514,8 @@ hr.line {
 
 .wrapper {
     margin: 0 auto;
-    width: 90%; /* або будь-яке інше значення, яке вам потрібно */
+    width: 90%;
+    /* або будь-яке інше значення, яке вам потрібно */
 }
 
 
@@ -877,7 +878,8 @@ body {
     position: relative;
     margin: auto;
     overflow: hidden;
-    height: 520px; /* Фіксована висота контейнера */
+    height: 520px;
+    /* Фіксована висота контейнера */
 }
 
 
@@ -888,7 +890,8 @@ body {
         /* Установіть висоту, яка вам підходить для малих екранів */
     }
 
-    .prev, .next {
+    .prev,
+    .next {
         font-size: 12px;
         /* Зменште розмір шрифту для кнопок попереднього і наступного слайда */
     }
@@ -902,12 +905,12 @@ body {
 .figure {
     margin: 10px;
     text-align: center;
-    opacity: 0.8; 
+    opacity: 0.8;
 }
 
 
 
-.figure-team-block p{
+.figure-team-block p {
     color: #BAC3CB;
 }
 
@@ -916,32 +919,42 @@ body {
 }
 
 .figure-team-block figure img {
-    width: 200px; /* встановлюємо ширину картинки */
-    height: 200px; /* встановлюємо висоту картинки */
-    border-radius: 820px; /* створюємо круглу форму */
+    width: 200px;
+    /* встановлюємо ширину картинки */
+    height: 200px;
+    /* встановлюємо висоту картинки */
+    border-radius: 820px;
+    /* створюємо круглу форму */
     object-fit: cover;
     /* зберігаємо пропорції і обрізаємо зайве */
-    margin-bottom: 10px; /* додатковий відступ для відділення від наступного блоку */
+    margin-bottom: 10px;
+    /* додатковий відступ для відділення від наступного блоку */
 }
 
 
 .figure-group-team {
-    text-align: center; /* центруємо вміст по горизонталі */
+    text-align: center;
+    /* центруємо вміст по горизонталі */
 }
 
 .figure-team-block {
-    display: flex; /* розміщуємо елементи в ряд */
-    flex-wrap: wrap; /* обгортаємо, коли не вміщаються в один ряд */
-    justify-content: center; /* центруємо елементи по горизонталі */
-    gap: 20px; /* Встановлюємо відступи між фігурами */
+    display: flex;
+    /* розміщуємо елементи в ряд */
+    flex-wrap: wrap;
+    /* обгортаємо, коли не вміщаються в один ряд */
+    justify-content: center;
+    /* центруємо елементи по горизонталі */
+    gap: 20px;
+    /* Встановлюємо відступи між фігурами */
 }
 
 .figure-team-block figure {
-    margin: 0 px; /* додаємо відступи між елементами */
+    margin: 0 px;
+    /* додаємо відступи між елементами */
 }
 
 
-.figure-group-title{
+.figure-group-title {
     color: white;
     margin-bottom: 30px;
     font-size: 25px;
@@ -956,13 +969,15 @@ body {
 
 @media (max-width: 800px) {
     .footer-car img {
-        width: 300px; /* новий розмір картинки при ширині від 800px */
+        width: 300px;
+        /* новий розмір картинки при ширині від 800px */
     }
 }
 
 
 .footer {
-    padding-top: 10px; /* відступи всередині футера */
+    padding-top: 10px;
+    /* відступи всередині футера */
 }
 
 
@@ -972,23 +987,13 @@ body {
 @media (max-width: 767px) {
     .main-nav {
         background: none;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
-    .main-line {
-        display: flex;
-        padding: 0;
-        list-style: none;
+    .main-line a {
+        font-size: 30px !important;
     }
 
-    .main-line li {
-        margin-right: 10px;
-    }
-
-    .main-line li:last-child {
-        margin-right: 0;
+    .main-top-container p{
+        font-size: 28px;
     }
 }

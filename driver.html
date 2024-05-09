@@ -135,49 +135,49 @@
     </main>
 
     <footer class="footer">
-		<div class="wrapper">
-			<div class="foote-top">
+        <div class="wrapper">
+            <div class="foote-top">
 
-				<div class="footer-car">
-					<img src="image/track.png" alt="track">
-					<p>Expedited Solutions Partner.</p>
-				</div>
-
-
-				<div class="goto">
-
-					<h5>GO TO</h5>
-
-					<ul>
-						<li class="gotop"><a href="index.html">HOME</a></li>
-						<li class="goab"><a href="about.html">ABOUT US</a></li>
-						<li class="goon"><a href="contact.html">CONTACT</a></li>
-					</ul>
-
-					<p>ESPfreight - Express Ship Plus, Inc.</p>
-				</div>
+                <div class="footer-car">
+                    <img src="image/track.png" alt="track">
+                    <p>Expedited Solutions Partner.</p>
+                </div>
 
 
-			</div>
+                <div class="goto">
+
+                    <h5>GO TO</h5>
+
+                    <ul>
+                        <li class="gotop"><a href="index.html">HOME</a></li>
+                        <li class="goab"><a href="about.html">ABOUT US</a></li>
+                        <li class="goon"><a href="contact.html">CONTACT</a></li>
+                    </ul>
+
+                    <p>ESPfreight - Express Ship Plus, Inc.</p>
+                </div>
 
 
-			<div class="footer-line"></div>
-			<div class="footer-bootom-contain">
-				<div class="footer-bootom-contain-text">
-					<p>Copyright © 2019. Express Ship Plus Inc. All rights reserved</p>
-				</div>
-
-				<div class="footer-bootom-contain-button">
-					<a href="tel:+1234567890" class="phone-button"><img src="image/phone.png" alt="logo-footer2"></a>
-					<a href="mailto:info@example.com" class="email-button"><img src="image/email.png"
-							alt="logo-footer"></a>
-				</div>
+            </div>
 
 
-			</div>
+            <div class="footer-line"></div>
+            <div class="footer-bootom-contain">
+                <div class="footer-bootom-contain-text">
+                    <p>Copyright © 2019. Express Ship Plus Inc. All rights reserved</p>
+                </div>
 
-		</div>
-	</footer>
+                <div class="footer-bootom-contain-button">
+                    <a href="tel:+1234567890" class="phone-button"><img src="image/phone.png" alt="logo-footer2"></a>
+                    <a href="mailto:info@example.com" class="email-button"><img src="image/email.png"
+                            alt="logo-footer"></a>
+                </div>
+
+
+            </div>
+
+        </div>
+    </footer>
 
 
 
@@ -185,17 +185,18 @@
 
     <script>
         const other = document.querySelector('#other');
-        const radios = [...document.querySelectorAll('input[type="radio"]')].filter(item => item !== other);
+        const radios = document.querySelectorAll('input[type="radio"]');
         const container = document.querySelector('#input-container');
 
-        other.onchange = () => {
-            radios.forEach(input => {
-                input.disabled = other.checked;
-                input.checked = false;
-                other.checked ? container.classList.remove('hidden') : container.classList.add('hidden');
+        radios.forEach(input => {
+            input.addEventListener('click', () => {
+                if (input === other && input.checked) {
+                    container.classList.remove('hidden');
+                } else {
+                    container.classList.add('hidden');
+                }
             });
-        };
-
+        });
 
 
         let menu_button = document.querySelector('.header__burger');
