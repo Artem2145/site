@@ -860,3 +860,11 @@ body {
         width: 300px; /* новий розмір картинки при ширині від 800px */
     }
 }
+
+
+@media screen and (max-width: 768px) {
+    #time {
+        width: 100%;
+        margin-left: 0;
+    }
+}
