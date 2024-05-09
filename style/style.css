@@ -512,7 +512,10 @@ hr.line {
     }
 }
 
-
+.wrapper {
+    margin: 0 auto;
+    width: 90%; /* або будь-яке інше значення, яке вам потрібно */
+}
 
 
 @media screen and (max-width: 500px) {

@@ -2,57 +2,96 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/team.css">
-    <title>ESP Freight TEAM</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style/team.css">
+	<title>ESP Freight TEAM</title>
 </head>
 
 <body>
-    <header>
-
-        <div class="header-line">
-            <div class="wrapper">
-                <div class="logo">
-                    <a href="index.html"><img src="image/logo.png" alt="logo"></a>
-                </div>
-                <nav class="info">
-                    <li class="icon"><a href="tel:+13478282822"><img src="image/phone.png" alt="tele-icon">(347)
-                            828-2822</a></li>
-                    <li class="iconn"><a href="mailto:dispatchesp@gmail.com"> <img src="image/email.png"
-                                alt="email-icon">Info@espfreight.com</a></li>
-                    <li class="iconnn"><img src="image/calendar.png" alt="calendar-icon">24/7 365 days</li>
-                </nav>
-            </div>
-
-        </div>
-
-    </header>
-
-    <main class="main">
-        <div class="wrapper">
-            <div class="main-nav">
-				<nav class="main-line">
-					<li><a href="index.html">HOME</a></li>
-					<li><a href="about.html">ABOUT US</a></li>
-					<li><a href="contact.html">CONTACT</a></li>
-					<li><a href="driver.html">DRIVER</a></li>
-					<li><a href="dilivery.html">GET A QUOTE</a></li>
-					<li><a href="team.html">TEAM</a></li>
+	<header class="header">
+		<div class="container">
+			<div class="header__body">
+				<a href="#" class="header__logo">
+					<img src="image/logo.png" alt="logo">
+				</a>
+				<div class="header__burger">
+					<span></span>
+				</div>
+				<nav class="header__menu">
+					<ul class="header__list">
+						<li>
+							<a href="index.html" class="header__link">HOME</a>
+						</li>
+						<li>
+							<a href="about.html" class="header__link">ABOUT US</a>
+						</li>
+						<li>
+							<a href="contact.html" class="header__link">CONTACT</a>
+						</li>
+						<li>
+							<a href="driver.html" class="header__link">DRIVER</a>
+						</li>
+						<li>
+							<a href="dilivery.html" class="header__link">GET A QUOTE</a>
+						</li>
+						<li>
+							<a href="team.html" class="header__link">TEAM</a>
+						</li>
+					</ul>
 				</nav>
 			</div>
+	</header>
+	<main class="main">
+		<div class="wrapper">
 
-            <div class="figure-group-team">    
-                <!-- comman -->
-                <span></span>
-            </div>
-        </div>
-    </main>
+			<div class="figure-group-team">
+				<!-- comman -->
+				<h4>ESP TEAM</h4>
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+				<div class="figure-team-block">
+					<figure>
+						<img src="image/team1.jpg" alt="employee">
+						<figcaption>
+							<h4>NAME </h4>
+							<P>job</P>
+
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="image/team2.jpg" alt="employee">
+						<figcaption>
+							<h4>NAME </h4>
+							<P>job</P>
+
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="image/team3.jpg" alt="employee">
+						<figcaption>
+							<h4>NAME </h4>
+							<P>job</P>
+
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="image/team4.jpg" alt="employee">
+						<figcaption>
+							<h4>NAME </h4>
+							<P>job</P>
+
+						</figcaption>
+					</figure>
+				</div>
+
+			</div>
+		</div>
+	</main>
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
-    <footer class="footer">
+	<footer class="footer">
 		<div class="wrapper">
 			<div class="foote-top">
 
@@ -96,6 +135,27 @@
 
 		</div>
 	</footer>
+
+
+
+	<script>
+		let menu_button = document.querySelector('.header__burger');
+		let menu_itself = document.querySelector('.header__menu');
+		let menu_list = document.querySelector('.header__list');
+		let body = document.querySelector('body');
+
+		menu_button.onclick = function () {
+			menu_button.classList.toggle('active');
+			menu_itself.classList.toggle('active');
+			body.classList.toggle('lock');
+		};
+
+		menu_list.onclick = function () {
+			menu_button.classList.toggle('active');
+			menu_itself.classList.toggle('active');
+			body.classList.toggle('lock');
+		};
+	</script>
 
 
 </body>
