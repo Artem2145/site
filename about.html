@@ -13,7 +13,7 @@
     <header class="header">
         <div class="container">
             <div class="header__body">
-                <a href="#" class="header__logo">
+                <a href="index.html" class="header__logo">
                     <img src="image/logo.png" alt="logo">
                 </a>
                 <div class="header__burger">
@@ -253,6 +253,25 @@
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
         }
+
+
+        let menu_button = document.querySelector('.header__burger');
+		let menu_itself = document.querySelector('.header__menu');
+		let menu_list = document.querySelector('.header__list');
+		let body = document.querySelector('body');
+
+		menu_button.onclick = function () {
+			menu_button.classList.toggle('active');
+			menu_itself.classList.toggle('active');
+			body.classList.toggle('lock');
+		};
+
+		menu_list.onclick = function () {
+			menu_button.classList.toggle('active');
+			menu_itself.classList.toggle('active');
+			body.classList.toggle('lock');
+		};
+
     </script>
 
 </body>

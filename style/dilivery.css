@@ -819,3 +819,37 @@ body {
     width: 40%;
     height: auto;
 }
+
+
+.header__logo img {
+    width: 200px;
+    display: block;
+}
+.header__logo {
+    margin-top: 5px; /* Змініть значення, яке підходить для вашого дизайну */
+    flex: 0 0 80px;
+    overflow: visible;
+    position: relative;
+    z-index: 3;
+}
+
+.footer-car img {
+    width: 30%;
+    height: auto;
+}
+
+
+.header__body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 120px; /* Збільште висоту блоку */
+    align-items: center;
+    padding-top: 20px; /* Збільште верхній відступ */
+    padding-bottom: 20px; /* Збільште нижній відступ */
+}
+
+
+.header__menu.active .header__list {
+    margin-top: 100px; /* Зсув на 50px вниз */
+}
