@@ -994,10 +994,14 @@ body {
     }
 
     .main-top-container p{
-        font-size: 28px;
+        font-size: 20px;
     }
 
 
 
     
+}
+.main-top-container p{
+    font-size: 20px;
+    font-weight: bold;
 }
