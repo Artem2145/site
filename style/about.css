@@ -1039,7 +1039,7 @@ body {
 }
 
 .header__link {
-    color: black;
+    color: #fff;
     text-transform: uppercase;
     font-size: 18px;
     text-decoration: none;
@@ -1190,6 +1190,7 @@ body {
 }
 
 
+
 .footer-car img {
     width: 30%;
     height: auto;
@@ -1206,6 +1207,9 @@ body {
     padding-bottom: 20px; /* Збільште нижній відступ */
 }
 
+.header__menu.active .header__list {
+    margin-top: 100px; /* Зсув на 50px вниз */
+}
 
 
 .header__menu.active .header__list {
@@ -1225,7 +1229,3 @@ body {
         /* Зменште розмір шрифту для кнопок попереднього і наступного слайда */
     }
 }
-
-/* Додайте інші медіа-запити, які вам потрібні для інших розмірів екрану */
-
-
