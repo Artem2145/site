@@ -315,6 +315,21 @@ header {
     max-width: 100%;
 }
 
+.goto {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 10px; /* Додатковий відступ для зручності */
+    height: 100%; /* Щоб відцентрувати всі елементи у блоку */
+}
+
+
+.goto ul {
+    margin-bottom: auto; /* Відступ знизу для вирівнювання всіх елементів у вертикальному напрямку */
+}
+
+
 .goto ul {
     list-style: none;
 }
@@ -967,6 +982,7 @@ body {
 .footer-car img {
     width: 30%;
     height: auto;
+    padding-left: 30px;
 }
 
 
@@ -983,6 +999,11 @@ body {
     /* відступи всередині футера */
 }
 
+
+
+.main-top-container p {
+    color: #BAC3CB;
+}
 
 
 
@@ -1007,4 +1028,12 @@ body {
 .main-top-container p{
     font-size: 20px;
     font-weight: bold;
+}
+
+.figure-team-block p {
+    width: 202px;
+}
+
+.figure-team-block h4{
+    font-size: 22px;
 }

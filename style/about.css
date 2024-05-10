@@ -1266,7 +1266,7 @@ body {
 
 
 body {
-    background-image: url(../image/basg.png);
+    background-image: url(../image/bag.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1283,4 +1283,31 @@ p {
 .pp {
     color: white;
     font-weight: bold;`
+}
+
+
+.footer-car img {
+    width: 30%;
+    height: auto;
+    padding-left: 30px;
+}
+
+
+.goto {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 10px; /* Додатковий відступ для зручності */
+    height: 100%; /* Щоб відцентрувати всі елементи у блоку */
+}
+
+
+.goto ul {
+    margin-bottom: auto; /* Відступ знизу для вирівнювання всіх елементів у вертикальному напрямку */
+}
+
+
+.goto ul {
+    list-style: none;
 }
