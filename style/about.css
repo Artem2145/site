@@ -622,9 +622,10 @@ hr.line {
 
 @media only screen and (max-width: 600px) {
     .slideshow-container {
-        height: 200px; 
+        height: 200px;
     }
 }
+
 @media screen and (max-width: 400px) {
     .main-top-img img {
         width: 80px;
@@ -654,11 +655,13 @@ hr.line {
     .main-line {
         justify-content: center;
     }
-    
-    
+
+
     .main-line li {
-        flex: 1 50%; /* Кожен пункт займає половину ширини батьківського контейнера */
-        text-align: center; /* Вирівнює текст по центру */
+        flex: 1 50%;
+        /* Кожен пункт займає половину ширини батьківського контейнера */
+        text-align: center;
+        /* Вирівнює текст по центру */
     }
 }
 
@@ -668,9 +671,9 @@ hr.line {
 @media screen and (max-width: 500px) {
     .main-nav {
         width: 80%;
-        margin: 0 auto; 
+        margin: 0 auto;
     }
-    
+
     .blue-block {
         display: flex;
         flex-direction: column;
@@ -689,16 +692,20 @@ hr.line {
 
         flex: 1 1 50%;
     }
+
     .main-line {
         display: flex;
-        flex-wrap: wrap; /* Розбиває на дві колонки */
+        flex-wrap: wrap;
+        /* Розбиває на дві колонки */
     }
-    
+
     .main-line li {
-        flex: 1 50%; /* Кожен пункт займає половину ширини батьківського контейнера */
-        text-align: center; /* Вирівнює текст по центру */
+        flex: 1 50%;
+        /* Кожен пункт займає половину ширини батьківського контейнера */
+        text-align: center;
+        /* Вирівнює текст по центру */
     }
-    
+
 }
 
 
@@ -837,7 +844,8 @@ hr.line {
 
 /* Обертка слайд-шоу */
 .slideshow-container {
-    max-width: 1000px; /* Максимальная ширина контейнера */
+    max-width: 1000px;
+    /* Максимальная ширина контейнера */
     position: relative;
     margin: auto;
     overflow: hidden;
@@ -846,11 +854,13 @@ hr.line {
 /* Изображения в слайд-шоу */
 .mySlides {
     display: none;
-    max-width: 100%; /* Изображение не будет больше контейнера */
+    max-width: 100%;
+    /* Изображение не будет больше контейнера */
 }
 
 /* Кнопки "Предыдущий" и "Следующий" слайд */
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -889,31 +899,38 @@ hr.line {
 }
 
 /* Активный кружочек-индикатор */
-.active, .dot:hover {
+.active,
+.dot:hover {
     background-color: #717171;
 }
 
 
 /* Обертка слайд-шоу */
 .slideshow-container {
-    max-width: 1000px; /* Максимальная ширина контейнера */
+    max-width: 1000px;
+    /* Максимальная ширина контейнера */
     position: relative;
     margin: auto;
     overflow: hidden;
-    height: 400px; /* Фиксированная высота контейнера */
+    height: 400px;
+    /* Фиксированная высота контейнера */
 }
 
 /* Изображения в слайд-шоу */
 .mySlides {
     display: none;
-    max-width: 100%; /* Изображение не будет больше контейнера */
-    height: 100%; /* Изображение займет всю высоту контейнера */
-    object-fit: cover; /* Заполнение контейнера, сохраняя соотношение сторон и обрезая изображение */
+    max-width: 100%;
+    /* Изображение не будет больше контейнера */
+    height: 100%;
+    /* Изображение займет всю высоту контейнера */
+    object-fit: cover;
+    /* Заполнение контейнера, сохраняя соотношение сторон и обрезая изображение */
 }
 
 @media only screen and (max-width: 600px) {
     .slideshow-container {
-        height: 200px; /* Уменьшенная высота контейнера для мобильных устройств */
+        height: 200px;
+        /* Уменьшенная высота контейнера для мобильных устройств */
     }
 }
 
@@ -921,11 +938,13 @@ hr.line {
 /* Для маленьких экранов (мобильные устройства) */
 @media only screen and (max-width: 600px) {
     .footer-car img {
-        width: 500px; /* Уменьшение ширины изображения до 50% */
-        margin: 0 auto; /* Центрирование изображения */
+        width: 500px;
+        /* Уменьшение ширины изображения до 50% */
+        margin: 0 auto;
+        /* Центрирование изображения */
     }
 
-    
+
 }
 
 
@@ -938,7 +957,8 @@ hr.line {
     position: relative;
     margin: auto;
     overflow: hidden;
-    height: 520px; /* Фіксована висота контейнера */
+    height: 520px;
+    /* Фіксована висота контейнера */
 }
 
 
@@ -949,7 +969,8 @@ hr.line {
         /* Установіть висоту, яка вам підходить для малих екранів */
     }
 
-    .prev, .next {
+    .prev,
+    .next {
         font-size: 12px;
         /* Зменште розмір шрифту для кнопок попереднього і наступного слайда */
     }
@@ -958,6 +979,32 @@ hr.line {
 /* Додайте інші медіа-запити, які вам потрібні для інших розмірів екрану */
 
 
+
+
+
+
+
+/* Для екранів шириною менше 600px */
+@media only screen and (max-width: 600px) {
+    .slideshow-container {
+        height: 200px;
+        /* Установіть висоту, яка вам підходить для малих екранів */
+    }
+
+    .prev,
+    .next {
+        font-size: 12px;
+        /* Зменште розмір шрифту для кнопок попереднього і наступного слайда */
+    }
+}
+
+
+@media (max-width: 800px) {
+    .footer-car img {
+        width: 300px;
+        /* новий розмір картинки при ширині від 800px */
+    }
+}
 
 
 
@@ -1001,9 +1048,9 @@ body {
 
 .header__logo img {
     width: 120px;
-  /*убирает нижнее подрезание для круглой картинки*/
+    /*убирает нижнее подрезание для круглой картинки*/
     display: block;
-  }
+}
 
 .header:before {
     content: '';
@@ -1039,7 +1086,7 @@ body {
 }
 
 .header__link {
-    color: firebrick;
+    color: #fff;
     text-transform: uppercase;
     font-size: 18px;
     text-decoration: none;
@@ -1068,7 +1115,7 @@ body {
     }
 
     .header__burger span {
-        background-color: black;
+        background-color: #fff;
         position: absolute;
         width: 100%;
         height: 2px;
@@ -1080,7 +1127,7 @@ body {
     .header__burger:before,
     .header__burger:after {
         content: '';
-        background-color: black;
+        background-color: #fff;
         position: absolute;
         width: 100%;
         height: 2px;
@@ -1171,6 +1218,7 @@ body {
     background-color: #1e90ff;
     transition: 0.5s;
 }
+
 .footer-car img {
     width: 40%;
     height: auto;
@@ -1181,15 +1229,15 @@ body {
     width: 200px;
     display: block;
 }
+
 .header__logo {
-    margin-top: 5px; /* Змініть значення, яке підходить для вашого дизайну */
+    margin-top: 5px;
+    /* Змініть значення, яке підходить для вашого дизайну */
     flex: 0 0 80px;
     overflow: visible;
     position: relative;
     z-index: 3;
 }
-
-
 
 .footer-car img {
     width: 30%;
@@ -1201,34 +1249,38 @@ body {
     position: relative;
     display: flex;
     justify-content: space-between;
-    height: 120px; /* Збільште висоту блоку */
+    height: 120px;
+    /* Збільште висоту блоку */
     align-items: center;
-    padding-top: 20px; /* Збільште верхній відступ */
-    padding-bottom: 20px; /* Збільште нижній відступ */
+    padding-top: 20px;
+    /* Збільште верхній відступ */
+    padding-bottom: 20px;
+    /* Збільште нижній відступ */
 }
+
 
 .header__menu.active .header__list {
-    margin-top: 50px; /* Зсув на 50px вниз */
+    margin-top: 50px;
+    /* Зсув на 50px вниз */
 }
 
 
-/* Для екранів шириною менше 600px */
-@media only screen and (max-width: 600px) {
-    .slideshow-container {
-        height: 200px;
-        /* Установіть висоту, яка вам підходить для малих екранів */
-    }
-
-    .prev, .next {
-        font-size: 12px;
-        /* Зменште розмір шрифту для кнопок попереднього і наступного слайда */
-    }
+body {
+    background-image: url(../image/basg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right;
+    height: 100vh;
 }
 
 
-@media (max-width: 800px) {
-    .footer-car img {
-        width: 300px; /* новий розмір картинки при ширині від 800px */
-    }
+p {
+    color: black;
+    font-weight: bold;
 }
 
+.pp {
+    color: black;
+    font-weight: bold;`
+}
