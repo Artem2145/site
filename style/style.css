@@ -952,6 +952,9 @@ body {
     margin: 0 px;
     /* додаємо відступи між елементами */
 }
+.figure-team-block figure p {
+    font-size: 15px;
+}
 
 
 .figure-group-title {
