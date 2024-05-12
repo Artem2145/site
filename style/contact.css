@@ -889,3 +889,12 @@ body {
 .goto ul {
     list-style: none;
 }
+
+
+
+@media (max-width: 800px) {
+    .footer-car img {
+        width: 300px;
+        /* новий розмір картинки при ширині від 800px */
+    }
+}
