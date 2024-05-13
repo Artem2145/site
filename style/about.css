@@ -1311,8 +1311,6 @@ p {
     list-style: none;
 }
 
-
-
 @media (max-width: 800px) {
     .footer-car img {
         width: 300px;
