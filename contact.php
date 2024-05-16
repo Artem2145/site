@@ -1,35 +1,35 @@
 ﻿﻿<?php
-$token = '5538201129:AAF2NZ3pqWt5AMZcU0t6huAoqUUGMn8fmWy';
 
+// Ваші токен і chat_id
+$token = '6804060756:AAGP0MP3zut8a3mNuX2eDa4_FAiQDfgmbQ8';
+$chat_id = '466175815';
 
-$chat_id = '-756248532';
+$name = isset($_POST['name']) ? $_POST['name'] : '';
+$position = isset($_POST['position']) ? $_POST['position'] : '';
+$email = isset($_POST['email']) ? $_POST['email'] : '';
+$phone = isset($_POST['phone']) ? $_POST['phone'] : '';
+$message = isset($_POST['message']) ? $_POST['message'] : '';
 
+// Перевірка, що всі необхідні поля заповнені
+if (!empty($name) && !empty($position) && !empty($email) && !empty($phone) && !empty($message)) {
+    $arr = array(
+        "name" => $name,
+        "position" => $position,
+        "email" => $email,
+        "phone" => $phone,
+        "message" => $message,
+    );
 
-$name = ($_POST['name']);
-$position = ($_POST['position']);
-$email = ($_POST['email']);
-$phone = ($_POST['phone']);
-$message = ($_POST['message']);
-$arr = array(
+    $txt = 'CONTACT FORM%0A';
+    foreach ($arr as $key => $value) {
+        $txt .= "<b>" . $key . "</b> " . $value . "%0A";
+    }
 
+    // Передаємо дані боту
+    $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}", "r");
 
-
-    "name " => $name,
-    "position " => $position,
-    "email " => $email,
-    "phone " => $phone,
-    "message " => $message,
-);
-
-foreach ($arr as $key => $value) {
-    $txt .= "<b>" . $key . "</b> " . $value . "%0A";
-};
-
-//Передаем данные боту
-$sendToTelegram = fopen("http://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}", "r");
-
-//Выводим сообщение об успешной отправке
-
+} else {
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -77,93 +77,59 @@ $sendToTelegram = fopen("http://api.telegram.org/bot{$token}/sendMessage?chat_id
 
     <main class="main">
         <div class="wrapper">
-
-
             <h4 class="h">Contact:</h4>
             <div class="input-block-contact">
+                <form action="contact.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name"><br>
 
+                    <label for="position">Position:</label>
+                    <input type="text" id="position" name="position"><br>
 
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name"><br>
+                    <label for="email">Email address:</label>
+                    <input type="email" id="email" name="email"><br>
 
-                <label for="position">Position:</label>
-                <input type="text" id="position" name="position"><br>
+                    <label for="phone">Phone number:</label>
+                    <input type="tel" id="phone" name="phone"><br>
 
-                <label for="email">Email address:</label>
-                <input type="email" id="email" name="email"><br>
+                    <label for="message">Text:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
 
-                <label for="phone">Phone number:</label>
-                <input type="tel" id="phone" name="phone"><br>
-
-                <label for="message">Text:</label><br>
-                <textarea id="message" name="message" rows="4" cols="50"></textarea>
-
-
-                <input style="    display: inline-block;
-    background-color: #1e90ff;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
-    font-size: 16px;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s;" type="submit" name="submit" value="Submit">
+                    <input style="display: inline-block; background-color: #1e90ff; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; margin-top: 15px; font-size: 16px; text-align: center; text-decoration: none; transition: background-color 0.3s;" type="submit" name="submit" value="Submit">
+                </form>
             </div>
         </div>
-
     </main>
-
 
     <footer class="footer">
         <div class="wrapper">
             <div class="foote-top">
-
                 <div class="footer-car">
                     <img src="image/track.png" alt="track">
                     <p>Expedited Solutions Partner</p>
                 </div>
-
-
                 <div class="goto">
-
                     <h5>GO TO</h5>
-
                     <ul>
                         <li class="gotop"><a href="index.html">HOME</a></li>
                         <li class="goab"><a href="about.html">ABOUT US</a></li>
                         <li class="goon"><a href="contact.php">CONTACT</a></li>
                     </ul>
-
                     <p>ESPfreight - Express Ship Plus, Inc.</p>
                 </div>
-
-
             </div>
-
-
             <div class="footer-line"></div>
             <div class="footer-bootom-contain">
                 <div class="footer-bootom-contain-text">
                     <p>Copyright © 2019. Express Ship Plus Inc. All rights reserved</p>
                 </div>
-
                 <div class="footer-bootom-contain-button">
                     <a href="tel:+1234567890" class="phone-button"><img src="image/phone.png" alt="logo-footer2"></a>
                     <a href="mailto:info@example.com" class="email-button"><img src="image/email.png" alt="logo-footer"></a>
                 </div>
-
-
             </div>
-
         </div>
     </footer>
-
-
-
-
 
     <script>
         let menu_button = document.querySelector('.header__burger');
@@ -183,9 +149,6 @@ $sendToTelegram = fopen("http://api.telegram.org/bot{$token}/sendMessage?chat_id
             body.classList.toggle('lock');
         };
     </script>
-
-
-
 
 </body>
 

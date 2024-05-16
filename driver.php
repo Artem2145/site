@@ -1,39 +1,37 @@
 <?php
-$token = '5538201129:AAF2NZ3pqWt5AMZcU0t6huAoqUUGMn8fmWy';
+
+$token = '6804060756:AAGP0MP3zut8a3mNuX2eDa4_FAiQDfgmbQ8';
+$chat_id = '466175815';
 
 
-$chat_id = '-756248532';
+$dob = isset($_POST['dob']) ? $_POST['dob'] : '';
+$name = isset($_POST['name']) ? $_POST['name'] : '';
+$phone = isset($_POST['phone']) ? $_POST['phone'] : '';
+$email = isset($_POST['email']) ? $_POST['email'] : '';
+$status = isset($_POST['status']) ? $_POST['status'] : '';
+$prev = isset($_POST['prev-company']) ? $_POST['prev-company'] : '';
+$start = isset($_POST['start-date']) ? $_POST['start-date'] : '';
 
+if (!empty($name) && !empty($phone) && !empty($email)) {
+    $arr = array(
+        "dob " => $dob,
+        "name " => $name,
+        "phone " => $phone,
+        "email " => $email,
+        "status-info " => $status,
+        "prev-company " => $prev,
+        "start-date " => $start,
+    );
 
-$dob = ($_POST['dob']);
-$name = ($_POST['name']);
-$phone = ($_POST['phone']);
-$email = ($_POST['email']);
-$status = ($_POST['status-info']);
-$prev = ($_POST['prev-company']);
-$start = ($_POST['start-date']);
-$arr = array(
+    $txt = 'DRIVER FROM%0A';
+    foreach ($arr as $key => $value) {
+        $txt .= "<b>" . $key . "</b> " . $value . "%0A";
+    }
 
+    $sendToTelegram = fopen("http://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}", "r");
 
-
-    "dob " => $dob,
-    "name " => $name,
-    "phone " => $phone,
-    "email " => $email,
-    "status-info " => $status,
-    "prev-company " => $prev,
-    "start-date " => $start,
-);
-
-foreach ($arr as $key => $value) {
-    $txt .= "<b>" . $key . "</b> " . $value . "%0A";
-};
-
-//Передаем данные боту
-$sendToTelegram = fopen("http://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}", "r");
-
-//Выводим сообщение об успешной отправке
-
+} else {
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -83,7 +81,6 @@ $sendToTelegram = fopen("http://api.telegram.org/bot{$token}/sendMessage?chat_id
         <div class="form-container">
             <h4 class="form-job">Drive for ESP FREIGHT</h4>
             <form class="form-dilivery" action="#" method="POST">
-
                 <div class="form-group">
                     <label for="dob">Date of Birth:</label>
                     <br>
@@ -109,23 +106,14 @@ $sendToTelegram = fopen("http://api.telegram.org/bot{$token}/sendMessage?chat_id
                 </div>
 
                 <div class="form-group">
-                    <label for="legal-status">Legal Status:</label>
+                    <label for="status">Legal Status:</label>
                     <br>
-                    <div id="legal-status">
-                        <input type="radio" id="citizen" name="legal-status" value="citizen" onclick="showSingleInput('citizen')">
-                        <label for="citizen">Citizen</label><br>
-                        <input type="radio" id="green-card" name="legal-status" value="green-card" onclick="showSingleInput('green-card')">
-                        <label for="green-card">Green Card</label><br>
-                        <input type="radio" id="work-authorization" name="legal-status" value="work-authorization" onclick="showSingleInput('work-authorization')">
-                        <label for="work-authorization">Work Authorization</label><br>
-                        <input type="radio" id="other" name="legal-status" value="other" onclick="showSingleInput('other')">
-                        <label for="other">Other</label><br>
-                    </div>
-                </div>
-
-                <div id="input-container" class="hidden">
-                    <label for="status-info">Your text:</label>
-                    <input type="text" id="status-info" name="status-info">
+                    <select id="status" name="status">
+                        <option value="Citizen">Citizen</option>
+                        <option value="Green Card">Green Card</option>
+                        <option value="Work Authorization">Work Authorization</option>
+                        <option value="Other">Other</option>
+                    </select>
                 </div>
 
                 <div class="form-group">
@@ -146,31 +134,7 @@ $sendToTelegram = fopen("http://api.telegram.org/bot{$token}/sendMessage?chat_id
                     <input type="date" id="start-date" name="start-date">
                 </div>
 
-
-                <form class="form-container">
-                    <form action="#">
-                        <label for="gender">Gender:</label>
-                        <select id="gender" name="gender">
-
-                            <option value="male">male</option>
-                            <option value="female">female</option>
-                            <option value="not">not specified</option>
-
-                        </select>
-                        <input style="    display: inline-block;
-    background-color: #1e90ff;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
-    font-size: 16px;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s;" type="submit" name="submit" value="Submit">
-                    </form>
-                </form>
+                <input type="submit" value="Submit">
             </form>
 
 

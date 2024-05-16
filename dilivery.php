@@ -1,24 +1,22 @@
 <?php
-$token = '5538201129:AAF2NZ3pqWt5AMZcU0t6huAoqUUGMn8fmWy';
+
+$token = '6804060756:AAGP0MP3zut8a3mNuX2eDa4_FAiQDfgmbQ8';
+$chat_id = '466175815';
 
 
-$chat_id = '-756248532';
+$adres = isset($_POST['adres']) ? $_POST['adres'] : '';
+$date = isset($_POST['date']) ? $_POST['date'] : '';
+$time = isset($_POST['time']) ? $_POST['time'] : '';
+$Quantity = isset($_POST['Quantity']) ? $_POST['Quantity'] : '';
+$Dimensions = isset($_POST['Dimensions']) ? $_POST['Dimensions'] : '';
+$Commodity = isset($_POST['Commodity']) ? $_POST['Commodity'] : '';
+$Weight = isset($_POST['Weight']) ? $_POST['Weight'] : '';
+$Diliveryto = isset($_POST['Diliveryto']) ? $_POST['Diliveryto'] : '';
+$dateto = isset($_POST['dateto']) ? $_POST['dateto'] : '';
+$timeto = isset($_POST['timeto']) ? $_POST['timeto'] : '';
 
-
-$adres = ($_POST['adres']);
-$date = ($_POST['date']);
-$time = ($_POST['time']);
-$Quantity = ($_POST['Quantity']);
-$Dimensions = ($_POST['Dimensions']);
-$Commodity = ($_POST['Commodity']);
-$Weight = ($_POST['Weight']);
-$Diliveryto = ($_POST['Diliveryto']);
-$dateto = ($_POST['dateto']);
-$timeto = ($_POST['timeto']);
+if(!empty($_POST)) {
 $arr = array(
-
-
-
 	"adres " => $adres,
 	"date " => $date,
 	"time " => $time,
@@ -28,18 +26,21 @@ $arr = array(
 	"Weight " => $Weight,
 	"Diliveryto " => $Diliveryto,
 	"dateto " => $dateto,
-	"timeto " => $timeto
+	"timeto " => $timeto,
+    "Lift gate " => isset($_POST['lift-gate']) ? $_POST['lift-gate'] : 'false',
+    "Pallet jack " => isset($_POST['pallet-jack']) ? $_POST['pallet-jack'] : 'false',
+    "Air ride " => isset($_POST['air-ride']) ? $_POST['air-ride'] : 'false',
+    "White glove service " => isset($_POST['glove']) ? $_POST['glove'] : 'false'
 );
+
+$txt = 'GET A QUOTE FORM%0A';
 
 foreach ($arr as $key => $value) {
 	$txt .= "<b>" . $key . "</b> " . $value . "%0A";
 };
 
-//Передаем данные боту
 $sendToTelegram = fopen("http://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}", "r");
-
-//Выводим сообщение об успешной отправке
-
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -100,98 +101,52 @@ $sendToTelegram = fopen("http://api.telegram.org/bot{$token}/sendMessage?chat_id
 
 			<br>
 
-			<form class="second-form">
-				<p>Pick up address</p>
+			<form class="second-form" method="POST">
+    <p>Pick up address</p>
+    <input type="text" name="adres"> <br> <br>
 
-				<br>
+    <p>Date</p>
+    <input type="date" id="date" placeholder="dd/mm/yyyy" name="date" /> <br> <br>
 
-				<input type="text" name="adres"> <br> <br>
+    <p>Time</p>
+    <input type="time" id="time" name="time" /> <br> <br>
 
+    <p>Quantity of pallets:</p>
+    <input type="text" name="Quantity" id="Quantity"> <br> <br>
 
-				<p>Date</p>
+    <p>Dimensions</p>
+    <input type="text" name="Dimensions" id="Dimensions"> <br> <br>
 
-				<br>
+    <p>Commodity:</p>
+    <input type="text" name="Commodity" id="Commodity"> <br> <br>
 
-				<input type="date" id="date" placeholder="dd/mm/yyyy" name="date" /> <br> <br>
+    <p>Weight:</p>
+    <input type="text" name="Weight" id="Weight"> <br> <br>
 
+    <p>Dilivery Address</p>
+    <input type="text" name="Diliveryto"> <br> <br>
 
-				<p>Time</p>
+    <p>Date</p>
+    <input type="date" id="dateto" name="dateto" placeholder="dd/mm/yyyy" /> <br> <br>
 
-				<br>
+    <p>Time</p>
+    <input type="time" id="timeto" name="timeto" />
 
-				<input type="time" id="time" name="time" /> <br> <br>
+    <div id="legal-status">
+        <input type="checkbox" id="lift-gate" name="lift-gate" value="true">
+        <label for="lift-gate">Lift gate</label><br>
+        <input type="checkbox" id="pallet-jack" name="pallet-jack" value="true">
+        <label for="pallet-jack">Pallet jack</label><br>
+        <input type="checkbox" id="air-ride" name="air-ride" value="true">
+        <label for="air-ride">Air ride</label><br>
+        <input type="checkbox" id="glove" name="glove" value="true">
+        <label for="glove">White glove service</label><br>
+    </div>
 
+    <br><br><br>
 
-				<p>Quantity of pallets:</p>
-
-				<input type="text" name="Quantity" id="Quantity"> <br> <br>
-
-				<p>Dimensions</p>
-
-				<input type="text" name="Dimensions" id="Dimensions"> <br> <br>
-
-				<p>Commodity:</p>
-
-				<input type="text" name="Commodity" id="Commodity"> <br> <br>
-
-				<p>Weight:</p>
-
-				<input type="text" name="Weight" id="Weight"> <br> <br>
-
-
-
-
-				<br> <br>
-
-
-				<form class="first-form">
-
-					<p>Dilivery Address</p>
-
-					<br>
-
-					<input type="text" name="Diliveryto"> <br> <br>
-
-					<p>Date</p>
-
-					<br>
-
-					<input type="date" id="dateto" name="dateto" placeholder="dd/mm/yyyy" /> <br> <br>
-
-
-					<p>Time</p>
-
-					<br>
-
-					<input type="time" id="timeto" name="timeto" />
-
-
-					<div id="legal-status">
-						<input type="checkbox" id="lift-gate" name="legal-status" value="lift-gate">
-						<label for="lift-gate">Lift gate</label><br>
-						<input type="checkbox" id="pallet-jack" name="legal-status" value="pallet-jack">
-						<label for="pallet-jack">Pallet jack</label><br>
-						<input type="checkbox" id="air-ride" name="legal-status" value="air-ride">
-						<label for="air-ride">Air ride</label><br>
-						<input type="checkbox" id="glove" name="legal-status" value="glove">
-						<label for="glove">White glove service</label><br>
-
-					</div>
-
-					<br><br><br>
-
-					<input style="    display: inline-block;
-    background-color: #1e90ff;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
-    font-size: 16px;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s;" type="submit" name="submit" value="Submit">
+    <input style="display: inline-block; background-color: #1e90ff; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; margin-top: 15px; font-size: 16px; text-align: center; text-decoration: none; transition: background-color 0.3s;" type="submit" name="submit" value="Submit">
+</form>
 
 
 

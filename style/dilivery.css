@@ -196,15 +196,6 @@ header {
     margin-bottom: 20px;
 }
 
-.input-quore-block {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: 20px auto;
-    /* Додав відступи по вертикалі та горизонталі */
-}
 
 .input-quore-block h4 {
     text-align: center;
@@ -214,7 +205,7 @@ header {
     text-transform: uppercase;
 }
 
-.input-quore-block p {
+.input-quore-block label {
     font-weight: bold;
     color: #555;
     margin-bottom: 10px;
@@ -223,7 +214,10 @@ header {
 .input-quore-block input[type="text"],
 .input-quore-block input[type="date"],
 .input-quore-block input[type="time"],
-.input-quore-block input[type="submit"] {
+.input-quore-block input[type="submit"],
+.input-quore-block input[type="email"],
+.input-quore-block input[type="tel"]
+ {
     width: calc(100% - 20px);
     padding: 8px 10px;
     margin-bottom: 15px;
@@ -645,9 +639,9 @@ body {
 
 .header__logo img {
     width: 120px;
-  /*убирает нижнее подрезание для круглой картинки*/
+    /*убирает нижнее подрезание для круглой картинки*/
     display: block;
-  }
+}
 
 .header:before {
     content: '';
@@ -815,6 +809,7 @@ body {
     background-color: #1e90ff;
     transition: 0.5s;
 }
+
 .footer-car img {
     width: 40%;
     height: auto;
@@ -822,11 +817,13 @@ body {
 
 
 .header__logo img {
-    width: 200px;
+    width: 100px;
     display: block;
 }
+
 .header__logo {
-    margin-top: 5px; /* Змініть значення, яке підходить для вашого дизайну */
+    margin-top: 5px;
+    /* Змініть значення, яке підходить для вашого дизайну */
     flex: 0 0 80px;
     overflow: visible;
     position: relative;
@@ -843,15 +840,13 @@ body {
     position: relative;
     display: flex;
     justify-content: space-between;
-    height: 120px; /* Збільште висоту блоку */
+    height: 120px;
+    /* Збільште висоту блоку */
     align-items: center;
-    padding-top: 20px; /* Збільште верхній відступ */
-    padding-bottom: 20px; /* Збільште нижній відступ */
-}
-
-
-.header__menu.active .header__list {
-    margin-top: 50px; /* Зсув на 50px вниз */
+    padding-top: 20px;
+    /* Збільште верхній відступ */
+    padding-bottom: 60px;
+    /* Збільште нижній відступ */
 }
 
 
@@ -887,6 +882,15 @@ body {
 .goto ul {
     list-style: none;
 }
+
+
+.footer-car img {
+    width: 30%;
+    height: auto;
+    padding-left: 30px;
+}
+
+
 @media (max-width: 800px) {
     .footer-car img {
         width: 300px;

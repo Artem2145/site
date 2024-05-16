@@ -1226,7 +1226,7 @@ body {
 
 
 .header__logo img {
-    width: 200px;
+    width: 100px;
     display: block;
 }
 
@@ -1254,15 +1254,11 @@ body {
     align-items: center;
     padding-top: 20px;
     /* Збільште верхній відступ */
-    padding-bottom: 20px;
+    padding-bottom: 60px;
     /* Збільште нижній відступ */
 }
 
 
-.header__menu.active .header__list {
-    margin-top: 50px;
-    /* Зсув на 50px вниз */
-}
 
 
 body {

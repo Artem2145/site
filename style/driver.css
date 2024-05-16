@@ -631,9 +631,9 @@ body {
 
 .header__logo img {
     width: 120px;
-  /*убирает нижнее подрезание для круглой картинки*/
+    /*убирает нижнее подрезание для круглой картинки*/
     display: block;
-  }
+}
 
 .header:before {
     content: '';
@@ -801,6 +801,7 @@ body {
     background-color: #1e90ff;
     transition: 0.5s;
 }
+
 .footer-car img {
     width: 40%;
     height: auto;
@@ -808,18 +809,18 @@ body {
 
 
 .header__logo img {
-    width: 200px;
+    width: 100px;
     display: block;
 }
+
 .header__logo {
-    margin-top: 5px; /* Змініть значення, яке підходить для вашого дизайну */
+    margin-top: 5px;
+    /* Змініть значення, яке підходить для вашого дизайну */
     flex: 0 0 80px;
     overflow: visible;
     position: relative;
     z-index: 3;
 }
-
-
 
 .footer-car img {
     width: 30%;
@@ -831,16 +832,14 @@ body {
     position: relative;
     display: flex;
     justify-content: space-between;
-    height: 120px; /* Збільште висоту блоку */
+    height: 120px;
+    /* Збільште висоту блоку */
     align-items: center;
-    padding-top: 20px; /* Збільште верхній відступ */
-    padding-bottom: 20px; /* Збільште нижній відступ */
+    padding-top: 20px;
+    /* Збільште верхній відступ */
+    padding-bottom: 60px;
+    /* Збільште нижній відступ */
 }
-
-.header__menu.active .header__list {
-    margin-top: 50px; /* Зсув на 50px вниз */
-}
-
 
 
 @media (max-width: 800px) {
