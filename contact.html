@@ -7,6 +7,7 @@
     <title>ESP Freight Contact</title>
     <link rel="stylesheet" href="style/contact.css">
 </head>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 
 <body>
 
@@ -64,8 +65,8 @@
                 <label for="message">Text:</label><br>
                 <textarea id="message" name="message" rows="4" cols="50"></textarea>
 
-
-                <a href="#" class="button">Submit</a>
+				<div class="g-recaptcha" data-sitekey="6Lcvz-IpAAAAAHyLCK9nQx0Eyz2wZ6WoRfVvRgjC"></div>
+                <button type="submit" class="button" id="submit-btn" disabled>Submit</button>
             </div>
         </div>
 
@@ -138,6 +139,10 @@
             menu_itself.classList.toggle('active');
             body.classList.toggle('lock');
         };
+
+		function recaptchaCallback() {
+			document.getElementById('submit-btn').disabled = false;
+		}
     </script>
 
 

@@ -1,7 +1,7 @@
 <?php
 
 $token = '6804060756:AAGP0MP3zut8a3mNuX2eDa4_FAiQDfgmbQ8';
-$chat_id = '466175815';
+$chat_id = '-1002063015366';
 
 
 $adres = isset($_POST['adres']) ? $_POST['adres'] : '';
@@ -14,6 +14,8 @@ $Weight = isset($_POST['Weight']) ? $_POST['Weight'] : '';
 $Diliveryto = isset($_POST['Diliveryto']) ? $_POST['Diliveryto'] : '';
 $dateto = isset($_POST['dateto']) ? $_POST['dateto'] : '';
 $timeto = isset($_POST['timeto']) ? $_POST['timeto'] : '';
+$email = isset($_POST['email']) ? $_POST['email'] : '';
+$phone = isset($_POST['phone']) ? $_POST['phone'] : '';
 
 if(!empty($_POST)) {
 $arr = array(
@@ -27,6 +29,8 @@ $arr = array(
 	"Diliveryto " => $Diliveryto,
 	"dateto " => $dateto,
 	"timeto " => $timeto,
+    "Email " => $email,
+    "Phone " => $phone,
     "Lift gate " => isset($_POST['lift-gate']) ? $_POST['lift-gate'] : 'false',
     "Pallet jack " => isset($_POST['pallet-jack']) ? $_POST['pallet-jack'] : 'false',
     "Air ride " => isset($_POST['air-ride']) ? $_POST['air-ride'] : 'false',
@@ -41,6 +45,23 @@ foreach ($arr as $key => $value) {
 
 $sendToTelegram = fopen("http://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}", "r");
 }
+
+$error = true;
+    $secret = '6Lcvz-IpAAAAACA-gn2eXQ_MUcAUy5dRVS5P9aD7';
+   
+    if (!empty($_POST['g-recaptcha-response'])) {
+        $curl = curl_init('https://www.google.com/recaptcha/api/siteverify');
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl, CURLOPT_POST, true);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, 'secret=' . $secret . '&response=' . $_POST['g-recaptcha-response']);
+        $out = curl_exec($curl);
+        curl_close($curl);
+        
+        $out = json_decode($out);
+        if ($out->success == true) {
+            $error = false;
+        } 
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,7 +73,9 @@ $sendToTelegram = fopen("http://api.telegram.org/bot{$token}/sendMessage?chat_id
 	<title>ESP Freight Delivery</title>
 	<script src="telegramform.js"></script>
 	<link rel="stylesheet" href="style/dilivery.css">
+
 </head>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 
 <body>
 
@@ -105,6 +128,12 @@ $sendToTelegram = fopen("http://api.telegram.org/bot{$token}/sendMessage?chat_id
     <p>Pick up address</p>
     <input type="text" name="adres"> <br> <br>
 
+    <p>Your email</p>
+    <input type="email" name="email"> <br> <br>
+
+    <p>Your phone number</p>
+    <input type="text" name="phone"> <br> <br>
+
     <p>Date</p>
     <input type="date" id="date" placeholder="dd/mm/yyyy" name="date" /> <br> <br>
 
@@ -144,9 +173,13 @@ $sendToTelegram = fopen("http://api.telegram.org/bot{$token}/sendMessage?chat_id
     </div>
 
     <br><br><br>
+	<div class="g-recaptcha" data-sitekey="6Lcvz-IpAAAAAHyLCK9nQx0Eyz2wZ6WoRfVvRgjC"></div>
 
-    <input style="display: inline-block; background-color: #1e90ff; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; margin-top: 15px; font-size: 16px; text-align: center; text-decoration: none; transition: background-color 0.3s;" type="submit" name="submit" value="Submit">
+    <button type="submit" class="button" id="submit-btn" disabled>Submit</button>
 </form>
+
+
+<br>
 
 
 
@@ -224,6 +257,10 @@ $sendToTelegram = fopen("http://api.telegram.org/bot{$token}/sendMessage?chat_id
 			menu_itself.classList.toggle('active');
 			body.classList.toggle('lock');
 		};
+
+		function recaptchaCallback() {
+			document.getElementById('submit-btn').disabled = false;
+		}
 	</script>
 
 

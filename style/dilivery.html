@@ -135,8 +135,9 @@
 					</div>
 
 					<br><br><br>
+					<div class="g-recaptcha" data-sitekey="6Lcvz-IpAAAAAHyLCK9nQx0Eyz2wZ6WoRfVvRgjC"></div>
 
-					<a href="#" class="button">Submit</a>
+					<button type="submit" class="button" id="submit-btn" disabled>Submit</button>
 
 
 
@@ -217,6 +218,13 @@
 			body.classList.toggle('lock');
 		};
 
+
+
+		
+
+		function recaptchaCallback() {
+			document.getElementById('submit-btn').disabled = false;
+		}
 	</script>
 
 

@@ -2,7 +2,7 @@
 
 // Ваші токен і chat_id
 $token = '6804060756:AAGP0MP3zut8a3mNuX2eDa4_FAiQDfgmbQ8';
-$chat_id = '466175815';
+$chat_id = '-1002063015366';
 
 $name = isset($_POST['name']) ? $_POST['name'] : '';
 $position = isset($_POST['position']) ? $_POST['position'] : '';
@@ -30,6 +30,23 @@ if (!empty($name) && !empty($position) && !empty($email) && !empty($phone) && !e
 
 } else {
 }
+
+$error = true;
+    $secret = '6Lcvz-IpAAAAACA-gn2eXQ_MUcAUy5dRVS5P9aD7';
+   
+    if (!empty($_POST['g-recaptcha-response'])) {
+        $curl = curl_init('https://www.google.com/recaptcha/api/siteverify');
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl, CURLOPT_POST, true);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, 'secret=' . $secret . '&response=' . $_POST['g-recaptcha-response']);
+        $out = curl_exec($curl);
+        curl_close($curl);
+        
+        $out = json_decode($out);
+        if ($out->success == true) {
+            $error = false;
+        } 
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,6 +58,7 @@ if (!empty($name) && !empty($position) && !empty($email) && !empty($phone) && !e
     <script src="telegramform.js"></script>
     <link rel="stylesheet" href="style/contact.css">
 </head>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 
 <body>
 
@@ -95,9 +113,11 @@ if (!empty($name) && !empty($position) && !empty($email) && !empty($phone) && !e
                     <label for="message">Text:</label><br>
                     <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
 
-                    <input style="display: inline-block; background-color: #1e90ff; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; margin-top: 15px; font-size: 16px; text-align: center; text-decoration: none; transition: background-color 0.3s;" type="submit" name="submit" value="Submit">
+                    <div class="g-recaptcha" data-sitekey="6Lcvz-IpAAAAAHyLCK9nQx0Eyz2wZ6WoRfVvRgjC"></div>
+                    <button type="submit" class="button" id="submit-btn" disabled>Submit</button>
                 </form>
             </div>
+            <br>
         </div>
     </main>
 
@@ -148,6 +168,11 @@ if (!empty($name) && !empty($position) && !empty($email) && !empty($phone) && !e
             menu_itself.classList.toggle('active');
             body.classList.toggle('lock');
         };
+
+
+        function recaptchaCallback() {
+			document.getElementById('submit-btn').disabled = false;
+		}
     </script>
 
 </body>

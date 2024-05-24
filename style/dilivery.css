@@ -225,7 +225,7 @@ header {
     border: 1px solid #ccc;
 }
 
-a.button {
+button {
     background-color: #4CAF50;
     color: white;
     padding: 10px 15px;
@@ -238,7 +238,7 @@ a.button {
     text-decoration: none;
 }
 
-a.button:hover {
+button:hover {
     background-color: #45a049;
 }
 
