@@ -1,67 +1,60 @@
 ﻿﻿<?php
-
-// Ваші токен і chat_id
 $token = '6804060756:AAGP0MP3zut8a3mNuX2eDa4_FAiQDfgmbQ8';
 $chat_id = '-1002063015366';
 
-$name = isset($_POST['name']) ? $_POST['name'] : '';
-$position = isset($_POST['position']) ? $_POST['position'] : '';
-$email = isset($_POST['email']) ? $_POST['email'] : '';
-$phone = isset($_POST['phone']) ? $_POST['phone'] : '';
-$message = isset($_POST['message']) ? $_POST['message'] : '';
+$error = true;
+$secret = '6Lcvz-IpAAAAACA-gn2eXQ_MUcAUy5dRVS5P9aD7';
 
-// Перевірка, що всі необхідні поля заповнені
-if (!empty($name) && !empty($position) && !empty($email) && !empty($phone) && !empty($message)) {
-    $arr = array(
-        "name" => $name,
-        "position" => $position,
-        "email" => $email,
-        "phone" => $phone,
-        "message" => $message,
-    );
-
-    $txt = 'CONTACT FORM%0A';
-    foreach ($arr as $key => $value) {
-        $txt .= "<b>" . $key . "</b> " . $value . "%0A";
-    }
-
-    // Передаємо дані боту
-    $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}", "r");
-
-} else {
+if (!empty($_POST['g-recaptcha-response'])) {
+    $curl = curl_init('https://www.google.com/recaptcha/api/siteverify');
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curl, CURLOPT_POST, true);
+    curl_setopt($curl, CURLOPT_POSTFIELDS, 'secret=' . $secret . '&response=' . $_POST['g-recaptcha-response']);
+    $out = curl_exec($curl);
+    curl_close($curl);
+    
+    $out = json_decode($out);
+    if ($out->success == true) {
+        $error = false;
+    } 
 }
 
-$error = true;
-    $secret = '6Lcvz-IpAAAAACA-gn2eXQ_MUcAUy5dRVS5P9aD7';
-   
-    if (!empty($_POST['g-recaptcha-response'])) {
-        $curl = curl_init('https://www.google.com/recaptcha/api/siteverify');
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($curl, CURLOPT_POST, true);
-        curl_setopt($curl, CURLOPT_POSTFIELDS, 'secret=' . $secret . '&response=' . $_POST['g-recaptcha-response']);
-        $out = curl_exec($curl);
-        curl_close($curl);
-        
-        $out = json_decode($out);
-        if ($out->success == true) {
-            $error = false;
-        } 
+if (!$error) {
+    $name = isset($_POST['name']) ? $_POST['name'] : '';
+    $position = isset($_POST['position']) ? $_POST['position'] : '';
+    $email = isset($_POST['email']) ? $_POST['email'] : '';
+    $phone = isset($_POST['phone']) ? $_POST['phone'] : '';
+    $message = isset($_POST['message']) ? $_POST['message'] : '';
+
+    if (!empty($name) && !empty($position) && !empty($email) && !empty($phone) && !empty($message)) {
+        $arr = array(
+            "name" => $name,
+            "position" => $position,
+            "email" => $email,
+            "phone" => $phone,
+            "message" => $message,
+        );
+
+        $txt = 'CONTACT FORM%0A';
+        foreach ($arr as $key => $value) {
+            $txt .= "<b>" . $key . "</b> " . $value . "%0A";
+        }
+
+        $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}", "r");
     }
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESP Freight Contact</title>
-    <script src="telegramform.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <link rel="stylesheet" href="style/contact.css">
 </head>
-<script src="https://www.google.com/recaptcha/api.js"></script>
-
 <body>
-
     <header class="header">
         <div class="container">
             <div class="header__body">
@@ -113,7 +106,7 @@ $error = true;
                     <label for="message">Text:</label><br>
                     <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
 
-                    <div class="g-recaptcha" data-sitekey="6Lcvz-IpAAAAAHyLCK9nQx0Eyz2wZ6WoRfVvRgjC"></div>
+                    <div class="g-recaptcha" data-sitekey="6Lcvz-IpAAAAAHyLCK9nQx0Eyz2wZ6WoRfVvRgjC" data-callback="recaptchaCallback"></div>
                     <button type="submit" class="button" id="submit-btn" disabled>Submit</button>
                 </form>
             </div>
@@ -157,24 +150,20 @@ $error = true;
         let menu_list = document.querySelector('.header__list');
         let body = document.querySelector('body');
 
-        menu_button.onclick = function() {
+        menu_button.onclick = function () {
             menu_button.classList.toggle('active');
             menu_itself.classList.toggle('active');
             body.classList.toggle('lock');
         };
 
-        menu_list.onclick = function() {
+        menu_list.onclick = function () {
             menu_button.classList.toggle('active');
             menu_itself.classList.toggle('active');
             body.classList.toggle('lock');
         };
-
-
         function recaptchaCallback() {
-			document.getElementById('submit-btn').disabled = false;
-		}
+            document.getElementById('submit-btn').disabled = false;
+        }
     </script>
-
 </body>
-
 </html>

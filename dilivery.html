@@ -145,9 +145,11 @@
 					</div>
 
 					<br><br><br>
+					
 
-					<a href="#" class="button">Submit</a>
+					<div id="captchaForm" class="g-recaptcha" data-sitekey="6Lcvz-IpAAAAAHyLCK9nQx0Eyz2wZ6WoRfVvRgjC"></div>
 
+    				<button type="submit" class="button" id="submit-btn" >Submit</button>
 
 
 
@@ -227,6 +229,37 @@
 			body.classList.toggle('lock');
 		};
 
+		let menu_button = document.querySelector('.header__burger');
+		let menu_itself = document.querySelector('.header__menu');
+		let menu_list = document.querySelector('.header__list');
+		let body = document.querySelector('body');
+
+		menu_button.onclick = function() {
+			menu_button.classList.toggle('active');
+			menu_itself.classList.toggle('active');
+			body.classList.toggle('lock');
+		};
+
+		menu_list.onclick = function() {
+			menu_button.classList.toggle('active');
+			menu_itself.classList.toggle('active');
+			body.classList.toggle('lock');
+		};
+
+		function recaptchaCallback() {
+			document.getElementById('submit-btn').disabled = false;
+		}
+		document.getElementById("captchaForm").addEventListener("submit", function(event) {
+        // Получаем значение капчи из поля ввода
+        var captchaValue = document.getElementById("captchaInput").value;
+        
+        // Здесь вы можете добавить вашу логику для проверки капчи
+        if (captchaValue !== "ожидаемое_значение_капчи") {
+            alert("Пожалуйста, введите правильную капчу.");
+            event.preventDefault(); // Останавливаем отправку формы
+        }
+        // Если капча верна, форма отправится автоматически
+    });
 	</script>
 
 
