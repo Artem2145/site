@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.clicker-container {
+    text-align: center;
+}
+
+.score {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.clickable-image {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.clickable-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; 
+    transition: transform 0.3s ease-in-out;
+}
+
+.clickable-img:hover {
+    transform: scale(1.1); 
+}

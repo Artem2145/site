@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/coin.css">
+    <title>Крипто-клікер, KULER COIN.</title>
+</head>
+<body>
+    
+    <div class="clicker-container">
+        <h1>Нажимай по цицькам, і заробляй гроші!</h1>
+        <br><br><br>
+        <div class="score">
+            <p>KULER COIN: <span id="score">0</span></p>
+        </div>
+        <div class="clickable-image" onclick="increaseScore()">
+            <img src="img/koin.jpg" alt="Click me" class="clickable-img">
+        </div>
+    </div>
+
+    <script>
+        let score = 0;
+
+    function increaseScore() {
+        score++;
+        document.getElementById("score").innerText = score;
+    }
+    </script>
+    
+</body>
+</html>
