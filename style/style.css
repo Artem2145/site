@@ -128,7 +128,7 @@ header {
 .main-line li a {
     text-decoration: none;
     color: black;
-    margin-right: 60px;
+    margin: 15px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -149,7 +149,7 @@ header {
 
 
 .main-nav {
-    width: 60%;
+    width: 50%;
     /* Пример: установите желаемую ширину */
     margin: 0 auto;
     /* Центрирование */

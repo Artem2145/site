@@ -376,10 +376,8 @@ hr.line {
 
 /* Стилі для форми */
 form {
-    background-color: #f9f9f9;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     margin: 0 auto;
 }
@@ -411,7 +409,8 @@ form p {
 /* Стилі для текстових полів */
 form input[type="text"],
 form input[type="date"],
-form input[type="time"] {
+form input[type="time"],
+form input[type="email"] {
     width: calc(100% - 20px);
     padding: 8px 10px;
     margin-bottom: 10px;
@@ -538,11 +537,14 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: right;
+    background-position: left;
     height: 100vh;
 }
-
-
+@media only screen and (max-width: 600px) {
+    body {
+        background-position: right 80% bottom 10%;
+    }
+}
 
 
 .form-dilivery {
@@ -608,9 +610,9 @@ h4.h {
 
 
 .input-block-contact {
-    background-color: rgba(255, 255, 255, 0.5);
     color: rgba(0, 0, 0, 0.8);
     padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
 
 
 }
@@ -639,21 +641,25 @@ body {
 
 .header {
     position: relative;
+    /* Додаємо релативне позиціонування */
     width: 100%;
     top: 0;
     left: 0;
     z-index: 50;
 }
 
+
 .header__logo {
     flex: 0 0 80px;
     overflow: visible;
+    /* Зміна з hidden на visible */
     position: relative;
     z-index: 3;
 }
 
 .header__logo img {
     width: 120px;
+    /*убирает нижнее подрезание для круглой картинки*/
     display: block;
 }
 
@@ -697,6 +703,7 @@ body {
     text-decoration: none;
 }
 
+/*классический вариант: @media (max-width:767px), я беру с запасом*/
 @media (max-width:800px) {
     body.lock {
         overflow: hidden;
@@ -800,6 +807,9 @@ body {
     }
 }
 
+
+
+
 .header__list a {
     position: relative;
 }
@@ -819,17 +829,6 @@ body {
     background-color: #1e90ff;
     transition: 0.5s;
 }
-.header__logo img {
-    width: 200px;
-    display: block;
-}
-.header__logo {
-    margin-top: 5px; /* Змініть значення, яке підходить для вашого дизайну */
-    flex: 0 0 80px;
-    overflow: visible;
-    position: relative;
-    z-index: 3;
-}
 
 .footer-car img {
     width: 40%;
@@ -837,24 +836,38 @@ body {
 }
 
 
+.header__logo img {
+    width: 100px;
+    display: block;
+}
+
+.header__logo {
+    margin-top: 5px;
+    /* Змініть значення, яке підходить для вашого дизайну */
+    flex: 0 0 80px;
+    overflow: visible;
+    position: relative;
+    z-index: 3;
+}
+
 .footer-car img {
     width: 30%;
     height: auto;
 }
 
+
 .header__body {
     position: relative;
     display: flex;
     justify-content: space-between;
-    height: 120px; /* Збільште висоту блоку */
+    height: 120px;
+    /* Збільште висоту блоку */
     align-items: center;
-    padding-top: 20px; /* Збільште верхній відступ */
-    padding-bottom: 20px; /* Збільште нижній відступ */
+    padding-top: 20px;
+    /* Збільште верхній відступ */
+    padding-bottom: 60px;
+    /* Збільште нижній відступ */
 }
-.header__menu.active .header__list {
-    margin-top: 50px; /* Зсув на 50px вниз */
-}
-
 
 @media (max-width: 800px) {
     .footer-car img {
@@ -888,4 +901,10 @@ body {
 
 .goto ul {
     list-style: none;
+}
+@media (max-width: 800px) {
+    .footer-car img {
+        width: 300px;
+        /* новий розмір картинки при ширині від 800px */
+    }
 }

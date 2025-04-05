@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<title>ESP Freight Delivery</title>
+	<link rel="stylesheet" href="style/dilivery.css">
+</head>
+
+<body>
+
+
+
+
+	<header class="header">
+		<div class="container">
+			<div class="header__body">
+				<a href="index.html" class="header__logo">
+					<img src="image/logo.png" alt="logo">
+				</a>
+				<div class="header__burger">
+					<span></span>
+				</div>
+				<nav class="header__menu">
+					<ul class="header__list">
+						<li>
+							<a href="index.html" class="header__link">HOME</a>
+						</li>
+						<li>
+							<a href="about.html" class="header__link">ABOUT US</a>
+						</li>
+						<li>
+							<a href="contact.html" class="header__link">CONTACT</a>
+						</li>
+						<li>
+							<a href="driver.html" class="header__link">DRIVERS</a>
+						</li>
+						<li>
+							<a href="dilivery.html" class="header__link">GET A QUOTE</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+	</header>
+
+	<main class="main">
+		<div class="wrapper">
+
+			<br><br>
+		</div>
+
+		<div class="form-dilivery">
+			<h4>Quote</h4>
+
+			<br>
+
+			<form class="second-form">
+				<p>Pick up address</p>
+
+				<br>
+
+				<input type="text" name="adres"> <br> <br>
+
+
+				<p>Date</p>
+
+				<br>
+
+				<input type="date" id="date" placeholder="dd/mm/yyyy" name="date" /> <br> <br>
+
+
+				<p>Time</p>
+
+				<br>
+
+				<input type="time" id="time" name="time" /> <br> <br>
+
+
+				<p>Quantity of pallets:</p>
+
+				<input type="text" name="adres"> <br> <br>
+
+				<p>Dimensions</p>
+
+				<input type="text" name="adres"> <br> <br>
+
+				<p>Commodity:</p>
+
+				<input type="text" name="adres"> <br> <br>
+
+				<p>Weight:</p>
+
+				<input type="text" name="adres"> <br> <br>
+
+
+
+
+				<br> <br>
+
+
+				<form class="first-form">
+
+					<p>Dilivery Address</p>
+
+					<br>
+
+					<input type="text" name="adres"> <br> <br>
+
+					<p>Date</p>
+
+					<br>
+
+					<input type="date" id="date" name="date" placeholder="dd/mm/yyyy" /> <br> <br>
+
+
+					<p>Time</p>
+
+					<br>
+
+					<input type="time" id="time" name="time" />
+
+
+					<div id="legal-status">
+						<input type="checkbox" id="lift-gate" name="legal-status" value="lift-gate">
+						<label for="lift-gate">Lift gate</label><br>
+						<input type="checkbox" id="pallet-jack" name="legal-status" value="pallet-jack">
+						<label for="pallet-jack">Pallet jack</label><br>
+						<input type="checkbox" id="air-ride" name="legal-status" value="air-ride">
+						<label for="air-ride">Air ride</label><br>
+						<input type="checkbox" id="glove" name="legal-status" value="glove">
+						<label for="glove">White glove service</label><br>
+
+					</div>
+
+					<br><br><br>
+					<div class="g-recaptcha" data-sitekey="6Lcvz-IpAAAAAHyLCK9nQx0Eyz2wZ6WoRfVvRgjC"></div>
+
+					<button type="submit" class="button" id="submit-btn" disabled>Submit</button>
+
+
+
+
+
+
+		</div>
+
+
+
+	</main>
+	<br><br><br>
+
+
+	<footer class="footer">
+		<div class="wrapper">
+			<div class="foote-top">
+
+				<div class="footer-car">
+					<img src="image/track.png" alt="track">
+					<p>Expedited Solutions Partner</p>
+				</div>
+
+
+				<div class="goto">
+
+					<h5>GO TO</h5>
+
+					<ul>
+						<li class="gotop"><a href="index.html">HOME</a></li>
+						<li class="goab"><a href="about.html">ABOUT US</a></li>
+						<li class="goon"><a href="contact.html">CONTACT</a></li>
+					</ul>
+
+					<p>ESPfreight - Express Ship Plus, Inc.</p>
+				</div>
+
+
+			</div>
+
+
+			<div class="footer-line"></div>
+			<div class="footer-bootom-contain">
+				<div class="footer-bootom-contain-text">
+					<p>Copyright © 2019. Express Ship Plus Inc. All rights reserved</p>
+				</div>
+
+				<div class="footer-bootom-contain-button">
+					<a href="tel:+1234567890" class="phone-button"><img src="image/phone.png" alt="logo-footer2"></a>
+					<a href="mailto:info@example.com" class="email-button"><img src="image/email.png"
+							alt="logo-footer"></a>
+				</div>
+
+
+			</div>
+
+		</div>
+	</footer>
+
+
+
+	<script>
+
+		let menu_button = document.querySelector('.header__burger');
+		let menu_itself = document.querySelector('.header__menu');
+		let menu_list = document.querySelector('.header__list');
+		let body = document.querySelector('body');
+
+		menu_button.onclick = function () {
+			menu_button.classList.toggle('active');
+			menu_itself.classList.toggle('active');
+			body.classList.toggle('lock');
+		};
+
+		menu_list.onclick = function () {
+			menu_button.classList.toggle('active');
+			menu_itself.classList.toggle('active');
+			body.classList.toggle('lock');
+		};
+
+
+
+		
+
+		function recaptchaCallback() {
+			document.getElementById('submit-btn').disabled = false;
+		}
+	</script>
+
+
+
+
+
+</body>
+
+</html>
